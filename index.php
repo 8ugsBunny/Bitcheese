@@ -70,7 +70,7 @@ include_once("utf8_header.php");
 	
 
 	
-	<div id="left-shopping-cart" class="123"><!--左側鑲版-->
+	<div id="left-shopping-cart"><!--左側鑲版-->
 		<div id="shopping-cart-title" class="special-font">Bitcheese</div>
 
 			<hr class="horizon">
