@@ -46,7 +46,7 @@ include_once("utf8_header.php");
 
 	
 
-	<div id="left-panel" class="fuck mom mom"><!--左側鑲版--><!--test-->
+	<div id="left-panel"><!--左側鑲版-->
 
 		<div id="category-title" class="special-font">Bitcheese</div>
 			<hr class="horizon">
@@ -67,10 +67,7 @@ include_once("utf8_header.php");
 		</div>
 	
 	</div>
-	<div></div>
-<div></div>
-	<div></div><div></div>
-	<div></div>
+	
 	
 	<div id="left-shopping-cart"><!--左側鑲版-->
 		<div id="shopping-cart-title" class="special-font">Bitcheese</div>
