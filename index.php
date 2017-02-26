@@ -11,7 +11,7 @@ include_once("utf8_header.php");
 <head>
 	<title>Bitcheese飾品</title>
 	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!--0219-->
@@ -45,9 +45,7 @@ include_once("utf8_header.php");
 	
 
 	
-
 	<div id="left-panel"><!--左側鑲版-->
-
 		<div id="category-title" class="special-font">Bitcheese</div>
 			<hr class="horizon">
 				<ul>
@@ -67,12 +65,12 @@ include_once("utf8_header.php");
 		</div>
 	
 	</div>
-	
 
+	
+	
 	
 	<div id="left-shopping-cart"><!--左側鑲版-->
 		<div id="shopping-cart-title" class="special-font">Bitcheese</div>
-
 			<hr class="horizon">
 				
 			<div id="for_scroll">
