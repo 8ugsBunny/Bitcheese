@@ -1,8 +1,8 @@
 <?php
 // for PDO
-$dsn 				= 'mysql:host=localhost;dbname=vhost98418-2'; 
-$db_username        = 'vhost98418'; //MySql database username
-$db_password        = 'zooz1234'; //MySql dataabse password
+$dsn 				= 'mysql:host=localhost;dbname=vhost110806'; 
+$db_username        = 'vhost110806'; //MySql database username
+$db_password        = 'cheeseacc1234'; //MySql dataabse password
 
 //connect to MySql							
 try{
