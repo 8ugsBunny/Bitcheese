@@ -126,8 +126,20 @@ include_once("utf8_header.php");
 			</div>
 		
 			<div id="login-page-info">
+
+			
+
+				
+				<button id="log_in_with_facebook">Log In With FaceBook</button>
+				<button onClick="fbLogout();">Log Out With FaceBook</button>
+
+				<div id="status">
+				</div>
+
+
 				<input class="input_1" type="text" name="email" placeholder=" 輸入信箱 ">
 				<input class="input_2" type="text" name="password" placeholder=" 密碼 ">
+
 			</div>
 			
 			<div id="login-page-nav">
@@ -289,7 +301,37 @@ include_once("utf8_header.php");
 					&nbsp;聯絡商家
 				</li>
 				
-				
+                <?php 
+                	if(isset($_COOKIE['user_id'])) {
+                		$content = <<<EOT
+                		<li id="membercenter">
+							<i class="fa fa-bookmark" aria-hidden="true"></i>   
+							&nbsp;會員中心
+						</li>
+
+						
+						<li id="sign-out">
+							<i class="fa fa-sign-out" aria-hidden="true"></i>   
+							&nbsp;登出
+						</li>
+						
+
+EOT;
+                	}
+                	else{
+                		$content = <<<EOT
+                		<li id="sign-in">
+							<i class="fa fa-sign-in" aria-hidden="true"></i>  
+							&nbsp;登入/申請帳號
+						</li>
+
+EOT;
+                	}
+                	echo($content);
+
+                ?>
+
+
 				<li id="sign-in">
 					<i class="fa fa-sign-in" aria-hidden="true"></i>  
 					&nbsp;登入/申請帳號
@@ -306,6 +348,7 @@ include_once("utf8_header.php");
 				</li>
 
 				
+
 			</ul>
 
 			<div class="clearfix"></div><!--ul只可與li搭配,所以clearfix要放外面-->
@@ -443,6 +486,13 @@ echo($content);
 				
 </div> <!--container結束-->
 
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
 
 <script type="text/javascript">
 		$(document).ready(function(){
@@ -578,6 +628,107 @@ echo($content);
 </script>
 
 
+<script>
+/***************FACEBOOK Function****************************/
+function fbLogin(){
+
+	 FB.login(function(response) {
+	 	console.log(response);
+		  if (response.status === 'connected') {// Logged into your app and Facebook.
+		  	testAPI();
+		  } 
+		  else if (response.status === 'not_authorized') {// The person is logged into Facebook, but not your app.
+		    
+		  } 
+		  else {// The person is not logged into Facebook, so we're not sure if 
+		  		//they are logged into this app or not.
+	  	  }
+	  	  
+	}, {scope: 'public_profile, email'});
+
+	
+}
+
+function testAPI() {//抓取使用FB登入的使用者資料，FB-ID和FB註冊信箱
+
+FB.api('/me','get', {fields: 'id, name, email, gender, locale, picture'}, function(response) {
+
+  	  console.log( response.id + "\n" + response.name + "\n" + response.email + "\n" + response.gender + "\n" + response.locale);
+
+      $.ajax({
+      	url: "fb_data_to_DB.php",
+      	type: "POST",
+      	data: {id: response.id, email: response.email}
+      }).done(function(data){
+      		console.log(data);
+      		location.reload();//執行完fb_data_to_DB.php，重載首頁
+      }).fail(function(jqXHR, textStatus, errorThrown) {
+		    console.log(jqXHR);
+		    console.log(textStatus);
+    		console.log(errorThrown);
+      });
+
+
+  });
+
+}
+
+function fbLogout(){
+	FB.logout(function(response) {
+  			console.log(response);
+  			window.location.href="log_out.php";//跳轉到log_out.php刪除session和cookie
+  	});
+}
+
+
+  window.fbAsyncInit = function() {//FB初始化
+	  FB.init({
+	    appId      : '159127631265867',
+	    cookie     : true,  // enable cookies to allow the server to access the session
+	    xfbml      : true,  // parse social plugins on this page
+	    version    : 'v2.8' // use graph api version 2.8
+	  });
+
+	  
+	  FB.getLoginStatus(function(response) {//載入頁面時，檢查FB登入狀況
+	  										//如果FB登入中，用cookie設定session
+	    console.log(response);
+	    if (response.status === 'connected') {
+	    	$.ajax({
+   			url: "start_session.php",
+   			type: "POST",
+   		}).done(function(data) {
+   			//console.log(data);
+   		}).fail(function(jqXHR, textStatus, errorThrown) {
+		    console.log(jqXHR);
+		    console.log(textStatus);
+    		console.log(errorThrown);
+	    });
+	    }
+	  });
+
+  };
+
+  
+(function(d, s, id) {// Load the SDK asynchronously
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/zh_TW/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  //FB登入
+  $("#log_in_with_facebook").click(function(e){
+  		fbLogin();
+  });
+
+  //會員登出和FB登出
+  $("#sign-out").click(function(e){
+  		fbLogout();	
+  });
+
+</script>
 
 
 <script>
