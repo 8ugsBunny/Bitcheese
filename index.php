@@ -143,8 +143,9 @@ include_once("utf8_header.php");
 				<input type="text" name="email" placeholder=" 帳號信箱">
 				<input type="text" name="password" placeholder=" 密碼">
 
-				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-				</fb:login-button>
+				
+				<button id="log_in_with_facebook">Log In With FaceBook</button>
+				<button onClick="fbLogout();">Log Out With FaceBook</button>
 
 				<div id="status">
 				</div>
@@ -220,33 +221,67 @@ include_once("utf8_header.php");
 		
 		<nav>
 			<ul>
-				<li id="trigger-category" class="hoverpointer">
+				<li id="trigger-category">
 					<i class="fa fa-th-large" aria-hidden="true"></i>
-					商品分類
+					&nbsp;商品分類
 			    </li>
 				
 				
 				
 				<li><i class="fa fa-search" aria-hidden="true"></i>
-					<input id="search-block" class="hoverpointer" type="text" name="search" placeholder=" 搜尋商品..">
+					&nbsp;<input id="search-block" type="text" name="search" placeholder=" 搜尋商品..">
 				</li>
 				
-				<li class="hoverpointer">
+				<!-- <li>
 					<i class="fa fa-list-ul" aria-hidden="true"></i> 
 					<a href="checkorder.html" target="_blank">訂單查詢</a>
+				</li> -->
+				
+				<a href="checkbill.html">
+				<li id="trigger-shopping-cart">
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+					&nbsp;購物車
+				</li>
+				</a>
+
+				<li id="contact-us">
+					<i class="fa fa-compress" aria-hidden="true"></i> 
+					&nbsp;聯絡商家
 				</li>
 				
+                <?php 
+                	if(isset($_COOKIE['user_id'])) {
+                		$content = <<<EOT
+                		<li id="membercenter">
+							<i class="fa fa-bookmark" aria-hidden="true"></i>   
+							&nbsp;會員中心
+						</li>
+
+						
+						<li id="sign-out">
+							<i class="fa fa-sign-out" aria-hidden="true"></i>   
+							&nbsp;登出
+						</li>
+						
+
+EOT;
+                	}
+                	else{
+                		$content = <<<EOT
+                		<li id="sign-in">
+							<i class="fa fa-sign-in" aria-hidden="true"></i>  
+							&nbsp;登入/申請帳號
+						</li>
+
+EOT;
+                	}
+                	echo($content);
+
+                ?>
+
 				
-				<li id="trigger-shopping-cart" class="hoverpointer">
-					<a href="checkbill.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>購物車</a>
-				</li>
-				
-				
-				<li id="sign-in" class="hoverpointer">
-					<i class="fa fa-bookmark" aria-hidden="true"></i>   
-					登入/申請
-				</li>
 			</ul>
+
 			<div class="clearfix"></div><!--ul只可與li搭配,所以clearfix要放外面-->
 		</nav>
 		
@@ -525,102 +560,105 @@ echo($content);
 
 
 <script>
-/***************FACEBOOK SDK****************************/
+/***************FACEBOOK Function****************************/
+function fbLogin(){
 
- // This is called with the results from from FB.getLoginStatus().
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-     
-    }
-  }
+	 FB.login(function(response) {
+	 	console.log(response);
+		  if (response.status === 'connected') {// Logged into your app and Facebook.
+		  	testAPI();
+		  } 
+		  else if (response.status === 'not_authorized') {// The person is logged into Facebook, but not your app.
+		    
+		  } 
+		  else {// The person is not logged into Facebook, so we're not sure if 
+		  		//they are logged into this app or not.
+	  	  }
+	  	  
+	}, {scope: 'public_profile, email'});
 
-  // This function is called when someone finishes with the Login
-  // Button.  See the onlogin handler attached to it in the sample
-  // code below.
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+	
+}
 
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '159127631265867',
-    cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.8' // use graph api version 2.8
+function testAPI() {//抓取使用FB登入的使用者資料，FB-ID和FB註冊信箱
+
+FB.api('/me','get', {fields: 'id, name, email, gender, locale, picture'}, function(response) {
+
+  	  console.log( response.id + "\n" + response.name + "\n" + response.email + "\n" + response.gender + "\n" + response.locale);
+
+      $.ajax({
+      	url: "fb_data_to_DB.php",
+      	type: "POST",
+      	data: {id: response.id, email: response.email}
+      }).done(function(data){
+      		console.log(data);
+      		location.reload();//執行完fb_data_to_DB.php，重載首頁
+      }).fail(function(jqXHR, textStatus, errorThrown) {
+		    console.log(jqXHR);
+		    console.log(textStatus);
+    		console.log(errorThrown);
+      });
+
+
   });
 
-  // Now that we've initialized the JavaScript SDK, we call 
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
+}
 
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+function fbLogout(){
+	FB.logout(function(response) {
+  			console.log(response);
+  			window.location.href="log_out.php";//跳轉到log_out.php刪除session和cookie
+  	});
+}
+
+
+  window.fbAsyncInit = function() {//FB初始化
+	  FB.init({
+	    appId      : '159127631265867',
+	    cookie     : true,  // enable cookies to allow the server to access the session
+	    xfbml      : true,  // parse social plugins on this page
+	    version    : 'v2.8' // use graph api version 2.8
+	  });
+
+	  
+	  FB.getLoginStatus(function(response) {//載入頁面時，檢查FB登入狀況
+	  										//如果FB登入中，用cookie設定session
+	    console.log(response);
+	    if (response.status === 'connected') {
+	    	$.ajax({
+   			url: "start_session.php",
+   			type: "POST",
+   		}).done(function(data) {
+   			//console.log(data);
+   		}).fail(function(jqXHR, textStatus, errorThrown) {
+		    console.log(jqXHR);
+		    console.log(textStatus);
+    		console.log(errorThrown);
+	    });
+	    }
+	  });
 
   };
 
-  // Load the SDK asynchronously
- 
-(function(d, s, id) {
+  
+(function(d, s, id) {// Load the SDK asynchronously
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
+    js.src = "//connect.facebook.net/zh_TW/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  // Here we run a very simple test of the Graph API after login is
-  // successful.  See statusChangeCallback() for when this call is made.
-  function testAPI() {
+  //FB登入
+  $("#log_in_with_facebook").click(function(e){
+  		fbLogin();
+  });
 
-    FB.api('/me','get', {fields: 'id, name, email, gender, locale, picture'}, function(response) {
+  //會員登出和FB登出
+  $("#sign-out").click(function(e){
+  		fbLogout();	
+  });
 
-      	  console.log( response.id + "\n" + response.name + "\n" + response.email + "\n" + response.gender + "\n" + response.locale);
-
-	      $.ajax({
-	      	url: "fb_data_to_DB.php",
-	      	type: "POST",
-	      	data: {id: response.id, email: response.email}
-	      }).done(function(data){
-	      		console.log(data);
-	      }).fail(function(jqXHR, textStatus, errorThrown) {
-				    console.log(jqXHR);
-				    console.log(textStatus);
-	        		console.log(errorThrown);
-	      });
-
-	    /*FB.logout(function(response) {
-   			// Person is now logged out
-		});*/
-
-	  });
-
-  }
 </script>
 
 
