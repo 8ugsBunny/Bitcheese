@@ -175,91 +175,192 @@ width:350px;}
 	text-align:center;
 }
 
-/*******結帳表格*******/
-td{
-		border-top:1px solid #BD9F87;
-		
+/*******結帳頁面check-bill*******/
+
+#check-bill-container{width:100%; text-align: center;
+border-top:1px solid #EEE;
+border-bottom:1px solid #EEE;
+border-left:1px solid #EEE;}
+
+#check-bill-pic{width:25%;border-right:1px solid #EEE;}
+#check-bill-pic>img{width:100%;height:auto;}
+#check-bill-title{width:25%;border-right:1px solid #EEE;}
+#check-bill-amount{width:25%;border-right:1px solid #EEE;}
+#check-bill-price{width:25%;border-right:1px solid #EEE;}
+
+#check-bill-pic,
+#check-bill-title,
+#check-bill-amount,
+#check-bill-price{float:left;}
+
+
+#check-bill-coupon{width:75%;margin-left:25%;text-align: center;
+border:1px solid #EEE;
+}
+#check-bill-coupon-title{width:33%;}
+#check-bill-coupon-serial{width:33%;}
+#check-bill-coupon-result{width:33%;}
+
+#check-bill-coupon-title,
+#check-bill-coupon-serial,
+#check-bill-coupon-result{float:left;}
+
+
+
+#check-bill-total{width:50%;margin-left:50%;text-align: center;border:1px solid #EEE;}
+#check-bill-total-title{width:50%;}
+#check-bill-total-result{width:50%;}
+
+
+
+#check-bill-total-title,
+#check-bill-total-result{float:left;}
+
+
+#delivery_method{width: 100%;margin-top:30px;margin-bottom:30px;}
+#delivery_method_tag{
+	width:25%;border-top:1px solid #EEE;border-left:1px solid #EEE;border-right:1px solid #EEE;
+	padding:5px;
+	font-size:16pt;
+	text-align: center;
+	background-color:#003D60;
+	color:white;
+
 }
 
+#delivery_method_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:1px solid #003D60;}
 
-table{
-		border-collapse:collapse;
-		width:100%;
-		margin:15px auto;
-		
+#delivery_method_BC{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#delivery_method_711{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#delivery_method_FM{padding-top:10px;padding-bottom:10px; padding-left:10px;}
+
+
+#delivery_method_BC>input{width:20px; height:20px;vertical-align:middle;}
+#delivery_method_711>input{width:20px; height:20px;vertical-align:middle;}
+#delivery_method_FM>input{width:20px; height:20px;vertical-align:middle;}
+
+
+#delivery_method_BC:hover{background-color:#b3b3b3;}
+#delivery_method_711:hover{background-color:#b3b3b3;}
+#delivery_method_FM:hover{background-color:#b3b3b3;}
+
+
+
+
+#payment_method{width: 100%; margin-top:30px;margin-bottom:30px;}
+#payment_method_tag{
+	width:25%;border-top:1px solid #EEE;border-left:1px solid #EEE;border-right:1px solid #EEE;
+	padding:5px;
+	font-size:16pt;
+	text-align: center;
+	background-color:#003D60;
+	color:white;
+
 }
 
-table>caption{font-size:30pt;
-              text-align:center;
-			  font-family:myFirstFont;}
+#payment_method_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:1px solid #003D60;}
 
-			  
-			  
+#payment_method_after{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#payment_method_before{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#payment_method_card{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px solid #EEE;}
+#payment_method_ticket{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px;}
 
-			  
-.check-bill-pics{width:20%;
-				}	
+#payment_method_after>input{width:20px; height:20px;vertical-align:middle;}
+#payment_method_before>input{width:20px; height:20px;vertical-align:middle;}
+#payment_method_card>input{width:20px; height:20px;vertical-align:middle;}
+#payment_method_ticket>input{width:20px; height:20px;vertical-align:middle;}
 
-	
+#payment_method_after:hover{background-color:#b3b3b3;}
+#payment_method_before:hover{background-color:#b3b3b3;}
+#payment_method_card:hover{background-color:#b3b3b3;}
+#payment_method_ticket:hover{background-color:#b3b3b3;}
 
-.check-bill-title{width:20%;
-text-align:center;
+
+
+#bill_info{width: 100%; margin-top:30px;margin-bottom:30px;}
+#bill_info_tag{
+	width:25%;border-top:1px solid #EEE;border-left:1px solid #EEE;border-right:1px solid #EEE;
+	padding:5px;
+	font-size:16pt;
+	text-align: center;
+	background-color:#003D60;
+	color:white;
+
+}
+
+#bill_info_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:1px solid #003D60;}
+
+#bill_info_name{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#bill_info_phone{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#bill_info_BC{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px solid #EEE;}
+#bill_info_711{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px solid  #EEE;}
+#bill_info_FM{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px;}
+
+#bill_info_name:hover{background-color:#b3b3b3;}
+#bill_info_phone:hover{background-color:#b3b3b3;}
+#bill_info_BC:hover{background-color:#b3b3b3;}
+#bill_info_711:hover{background-color:#b3b3b3;}
+#bill_info_FM:hover{background-color:#b3b3b3;}
+
+
+#bill_info_name{letter-spacing: 10px;}
+#bill_info_phone{letter-spacing: 14.5px;}
+
+
+
+
+
+
+footer
+
+{margin-top:200px;
+	width:100%;
+	background-color:#BD9F87;
+	color:white;}
+
+
+#footer_logo_title{
+		font-family: myfirstfont;
+		font-size:30pt;
+		border-bottom:1px solid white;
+		width:20%;
+		padding-left:20px;
+		float:left;
+		text-align: center;
 }	
 
-.check-bill-space{width:30%;}  
+#footer_logo_title>div{
+	font-family:'century gothic';
+	font-size:10pt;
+}	
 
+#footer_media_title{width:20%;float:left;text-align: center; padding-top:25px;font-size:15pt;}
+#footer_info_title{width:20%;float:left;text-align: center; padding-top:25px;font-size:15pt;}
+#footer_line_title{width:20%;float:left;text-align: center; padding-top:25px;font-size:15pt;}
 
+#footer_logo_info{width:20%;float:left; text-align: center;margin-bottom:50px;}
+#footer_media_info{width:20%;float:left;text-align: center;margin-bottom:50px;}
+#footer_info_info{width:20%;float:left;text-align: center; margin-bottom:50px;}
+#footer_line_info{width:20%;float:left;text-align: center; margin-bottom:50px;}
 
-.check-bill-total{height:50px;}
-
-.check-bill-total-number{
-
-font-size:13pt;
+#footer_line_info>img{
+	width:220px;
+	height:auto;
 }
 
-.check-bill-price{
-	font-size:13pt;
-		text-align:left;
+.media_icon{
 
-}
+display:inline-block;
 
+width:50px;
+height:50px;
+border-radius:25px;
+text-align: center;
+border:1px solid white;
+padding-top:10px;
+cursor:pointer;
 
-.check-bill-coupon{height:50px;}
-.check-bill-coupon-total{
-font-size:13pt;	
-}
-
-
-tr:nth-child(2n){
-	background-color:#EBEBEB;
-}
-
-tr:last-child{
-	background-color:white;
-
-}
-
-
-#consumer-info{font-size:13pt;
-               border:1px solid  #BD9F87;
-			   padding-top:30px;
-			   padding-left:20px;
-			   padding-bottom:30px;
-			   margin-bottom:20px;
-			   margin-top:30px;}
-			   
-			   
-#submit-button{text-align:center;
-margin-bottom:20px;}
-			   
-footer{width:100%;
-	background-color:#BD9F87;
-	font-family:myFirstFont;
-	font-size:25pt;
-	text-align:center;
-	color:white;}			   
-		   
-
+}	   
 
 
 
@@ -366,7 +467,7 @@ header{
 				width:96px;
 				height:137px;
 				/*使logo向下移動,頂端與nav切齊*/
-				margin-top:40px;	
+				margin-top:50px;	
           		
 }
 
@@ -432,23 +533,21 @@ nav>ul{
 nav li{
 			/*設定nav底下li的樣式*/
 			font-size:13px;
-			color:#b3b3b3;/*灰色*/
-			margin:0 10px;
+			color:#595959;/*灰色*/
+			margin:0 1px;
 			/*設定背景顏色為白色*/
-			background-color:rgba(255, 255, 255 ,1);
+			background-color: rgba(255, 255, 255, 0.7);
 			/*設定文字內容與框線距離*/
 			padding-left:10px;
 			padding-right:10px;
 			padding-top:5px;
 			padding-bottom:5px;
-			/*設定框線樣式*/
-			border:solid;
-			border-width:1px;
-			border-color:#BD9F87;/*印金色*/
 			border-radius:2px;
+			border:1px solid #EEE;
 		    /*向左漂浮*/
 			float:left;
-			box-shadow: 1px 1px 1px #808080;
+			
+			
 }
 
 nav{
@@ -459,15 +558,57 @@ nav{
 		z-index:1;
 }
 
-{padding-right:2px;}
+nav a:link{
+			text-decoration: none;
+			color:#595959;
+}
+
+nav a:visited{
+				color:#595959;
+}
+
+nav a:hover li{
+			color:#EEE;
+			background-color: #b3b3b3;
+}
+
+#sign-in,#sign-out,#trigger-category,#contact-us{
+									cursor:pointer;
+}
+
+#trigger-category:hover{
+		color:#EEE;
+		background-color: #b3b3b3;
+
+}
+
+#sign-in:hover{color:#EEE;
+		background-color: #b3b3b3;}
+
+#sign-out:hover{
+		color:#EEE;
+		background-color: #b3b3b3;
+}
+
+#contact-us:hover{
+		color:#EEE;
+		background-color: #b3b3b3;
+}
 
 
 #search-block{
-			border:none;/*將input外框取消*/
-			padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
-			background-color:rgba(255, 255, 255,);
-			 
+background-color: white;
+border:none;/*將input外框取消*/
+border-radius:3px;
+width:150px;
+padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
+
 }
+
+
+
+
+
 
 #display{
 			/*使display區塊大小符合container大小*/
@@ -977,11 +1118,15 @@ font-family:myFirstFont;
 				border: 1px solid;
 				border-color: #EEE;
 				border-radius: 2px;
-				box-sizing: border-box;
 				margin-bottom: 10px;
 				/*box-shadow:1px 1px 10px #000000;*/
-				font-family:"微軟正黑體","Microsoft JhengHei","Georgia";
+				font-family:"微軟正黑體","Microsoft JhengHei";
 				
+}
+
+.grid-item:hover{box-shadow:1px 1px 3px #595959;
+				border-color:#b3b3b3;
+			transition:0.5s;
 }
 
 
@@ -1000,13 +1145,13 @@ font-family:myFirstFont;
 /***************Grid-item 背景色****************/
 
 .grid-item-color-0{
-	background: #EAE6DE;
+	background: #EEE;
 }
 .grid-item-color-1{
-	background: #E5E4E3;
+	background:#EEE;
 }
 .grid-item-color-2{
-	background: #EAE4E3;
+	background: #EEE;
 }
 .grid-item-color-3{
 	background: #60B9BD;
@@ -1107,7 +1252,7 @@ height:auto;}
 				/*調整字體大小與位置和顏色*/
 				font-size:15pt;
 				padding-bottom:5px;
-				color:black;/*黑色*/
+				color:#595959;/*黑色*/
 }
 
 
@@ -1122,43 +1267,40 @@ height:auto;}
 .buy-instantly{
 						/*一鍵購買的樣式調整*/
 						text-align:center;
-						font-size:10pt;
-						color:white;
 						height:15%;/*高度佔15% 另外15%給shopping-cart div*/
 						width:100%;
-						
-						/*調整整體文字的距離*/
-						padding-top:5px;
-						padding-bottom:5px;
-						margin-bottom:50px;
-						margin-top:50px;
-}
-				
-				
-.buy-instantly-button{
-						border:solid 1px;
-						border-color:#EEE;
-						padding:5px;
-						padding-left:15px;
-						padding-right:15px;
+
+						border:solid 1px #EEE;
 						border-radius:3px;
+
 						font-size:12pt;
-						color:#b3b3b3;
+						color:#595959;
 						letter-spacing:2px;
-						background-color: #EEE;
+
+						width:80px;
+						padding:5px;
+						margin:0 auto;
+						margin-top:20px;
+						margin-bottom:20px;
+
 }
+
+.buy-instantly:hover{
+	border-color:#BD9F87;
+	transition:0.5s;
+}
+				
+				
 
 .shopping-cart{
 						
 						width:100%;
 						height:15%;/*與上方一鍵購買區塊各佔15% 總共等於nav show div的30%*/
-						color:black;/*調整按鈕顏色為 黑色*/
+						color:#8c8c8c;
 						font-size:14pt;/*調整按鈕大小*/
 						margin-top:10px;
 						border-top:solid 1px;
-						border-color: white;
-						
-						
+						border-color: white;						
 }
 
 
@@ -1170,20 +1312,15 @@ height:auto;}
                                 width:49%;/*寬度與右邊button一樣都為49% 留點空間給border*/
 								text-align:center;
 								display:inline-block;
-								
 								/*設置右方border*/
 								border-right:solid;
 								border-width:1px;
 								border-color: white;
-							
-								
+								color:#8c8c8c;
 								/*調整整體文字距離*/
 								padding-top:5px;
-								padding-bottom:5px;
-								
-								/*陰影*/
-								
-						}
+								padding-bottom:5px;			
+}
 
 .shopping-cart-button2{
 									width:49%;/*寬度與左邊button一樣都為49% 留點空間給border*/
@@ -1192,12 +1329,21 @@ height:auto;}
 									
 									/*調整整體文字距離*/
 									padding-top:5px;
-									padding-bottom:5px;
-						         	/*陰影*/
-								
+									padding-bottom:5px;								
 }
 
 
+.shopping-cart-button1:hover{
+							color:black;
+							transition:0.5s;
+							cursor:pointer;
+}
+
+.shopping-cart-button2:hover{
+							color:black;
+							transition:0.5s;
+							cursor:pointer;
+}
 
 
 
@@ -1222,12 +1368,12 @@ height:auto;}
 							text-align:center;
 }
 
-.line-through{
-					text-decoration:line-through;
-					font-size:9pt;
-					color:red;
 
-}
+#masonry a:link{text-decoration: none;
+				color:#595959;}
+
+#masonry a:visited{color:#595959;}
+
 
 
 

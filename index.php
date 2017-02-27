@@ -261,33 +261,53 @@ include_once("utf8_header.php");
 		
 		<nav>
 			<ul>
-				<li id="trigger-category" class="hoverpointer">
+				<li id="trigger-category">
 					<i class="fa fa-th-large" aria-hidden="true"></i>
-					商品分類
+					&nbsp;商品分類
 			    </li>
 				
 				
 				
 				<li><i class="fa fa-search" aria-hidden="true"></i>
-					<input id="search-block" class="hoverpointer" type="text" name="search" placeholder=" 搜尋商品..">
+					&nbsp;<input id="search-block" type="text" name="search" placeholder=" 搜尋商品..">
 				</li>
 				
-				<li class="hoverpointer">
+				<!-- <li>
 					<i class="fa fa-list-ul" aria-hidden="true"></i> 
 					<a href="checkorder.html" target="_blank">訂單查詢</a>
+				</li> -->
+				
+				<a href="checkbill.html">
+				<li id="trigger-shopping-cart">
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+					&nbsp;購物車
+				</li>
+				</a>
+
+				<li id="contact-us">
+					<i class="fa fa-compress" aria-hidden="true"></i> 
+					&nbsp;聯絡商家
 				</li>
 				
 				
-				<li id="trigger-shopping-cart" class="hoverpointer">
-					<a href="checkbill.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>購物車</a>
+				<li id="sign-in">
+					<i class="fa fa-sign-in" aria-hidden="true"></i>  
+					&nbsp;登入/申請帳號
 				</li>
-				
-				
-				<li id="sign-in" class="hoverpointer">
+
+				<li id="membercenter">
 					<i class="fa fa-bookmark" aria-hidden="true"></i>   
-					登入/申請
+					&nbsp;會員中心
 				</li>
+
+				<li id="sign-out">
+					<i class="fa fa-sign-out" aria-hidden="true"></i>   
+					&nbsp;登出
+				</li>
+
+				
 			</ul>
+
 			<div class="clearfix"></div><!--ul只可與li搭配,所以clearfix要放外面-->
 		</nav>
 		
@@ -375,11 +395,11 @@ include_once("utf8_header.php");
 					
 								<div class="nav-show"><!--商品呈現導覽列-->
 
-									<div class="buy-instantly"><!--導覽列左方按鈕-->
-										<span class="buy-instantly-button">
-											<a href="checkbill.html">購買</a>
-										</span>
-									</div>
+									<a href="checkbill.html">
+										<div class="buy-instantly"><!--導覽列左方按鈕-->
+											結帳
+										</div>
+									</a>
 	     
 									
 									<div class="shopping-cart"><!--導覽列右方按鈕-->
