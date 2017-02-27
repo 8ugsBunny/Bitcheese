@@ -25,8 +25,7 @@ include_once("utf8_header.php");
 
 	<link rel="stylesheet" href="css/Main.css" media="(min-width:1025px)">
 
-	<link rel="stylesheet" href="css/Tablet.css" 
-	media="(min-width:768px) and (max-width:1024px)">  
+	<link rel="stylesheet" href="css/Tablet.css" media="(min-width:768px) and (max-width:1024px)">  
 
 	<link rel="stylesheet" href="css/MobileDevice.css" media="(max-width:767px)">
 	
@@ -56,14 +55,6 @@ include_once("utf8_header.php");
 					<li>Leg</li>
 					<li>others</li>
 				</ul>
-	
-		<div id="side-tag" class="hoverpointer">
-			<br>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i>
-			<br>
-			<br>
-		</div>
-	
 	</div>
 
 	
@@ -112,15 +103,6 @@ include_once("utf8_header.php");
 
 
 				<div id="purchase-button">Check Out Bill</div>
-				
-			<div id="side-tag" class="hoverpointer">
-				<br>
-					<i class="fa fa-arrow-right" aria-hidden="true"></i>
-				<br>
-				<br>
-			</div>
-				
-	
 	</div>
 		
 	
@@ -131,17 +113,21 @@ include_once("utf8_header.php");
 	
 	
 	<div id="login-page"><!--login-page-->
+
 		<div id="login-page-content">
+
+		 <div class="cancel_button">
 			<i class="fa fa-times" aria-hidden="true" id="log-in-cancel"></i>
-				<div class="clearfix"></div>
+		</div>
+
 			
 			<div id="login-page-logo">
-				<span class="tips">Insight of taste</span>
+				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 		
 			<div id="login-page-info">
-				<input type="text" name="email" placeholder=" 帳號信箱">
-				<input type="text" name="password" placeholder=" 密碼">
+
+			
 
 				
 				<button id="log_in_with_facebook">Log In With FaceBook</button>
@@ -150,23 +136,89 @@ include_once("utf8_header.php");
 				<div id="status">
 				</div>
 
+
+				<input class="input_1" type="text" name="email" placeholder=" 輸入信箱 ">
+				<input class="input_2" type="text" name="password" placeholder=" 密碼 ">
+
 			</div>
 			
 			<div id="login-page-nav">
-				<span class="forget-password">Forget Password</span>
-				<br>
-	            <span class="login-by-facebook">Login with Facebook</span>
+				登入
 			</div>
 		
-			<div id="login-tips">
-				<!--<span class="tips">
-				Insight of taste <br>
-				 	小提醒!免帳號也能輕鬆購買Bitcheese所有商品!<br>
-					申請帳號可立即享有Bitcheese所有活動優惠<br>
-					要不要申請你自己選<br>
-					反正帳號我是要定了 -->
-					</span>
+			<div id="login-page-forget">
+				忘記密碼
 			</div>	
+			
+
+			<div id="login-page-new">
+				註冊新帳號
+			</div>
+
+
+		</div>
+	</div>
+
+	<!-- 取回密碼 -->
+
+	<div id="pw-back-page"><!--pw-back-->
+
+		<div id="pw-back-page-content">
+
+		 <div class="cancel_button">
+			<i class="fa fa-times" aria-hidden="true" id="pw-back-cancel"></i>
+		</div>
+
+			
+			<div id="pw-back-page-logo">
+				<img src="images/logo_name.png" alt="Bitcheese飾品">
+			</div>
+
+			<div id="pw-back-page-tip">
+				請輸入您註冊所使用的信箱
+			</div>
+		
+			<div id="pw-back-page-info">
+				<input class="input_1" type="text" name="email" placeholder=" 輸入信箱 ">
+			</div>
+
+			<div id="pw-back-page-new">
+				取回密碼
+			</div>
+
+
+		</div>
+	</div>
+
+	<!-- 帳號註冊 -->
+
+	<div id="register-page"><!--register-->
+
+		<div id="register-page-content">
+
+		 <div class="cancel_button">
+			<i class="fa fa-times" aria-hidden="true" id="register-cancel"></i>
+		</div>
+
+			
+			<div id="register-page-logo">
+				<img src="images/logo_name.png" alt="Bitcheese飾品">
+			</div>
+		
+			<div id="register-page-info">
+				<input class="input_1" type="text" name="email" placeholder=" E-mail ">
+				<input class="input_2" type="text" name="password" placeholder=" 密碼 ">
+				<input class="input_3" type="text" name="re-password" placeholder=" 確認密碼">
+				<input class="input_4" type="text" name="name" placeholder=" 使用者名稱 ">
+				<input class="input_5" type="text" name="phone" placeholder=" 手機 ">
+				<input class="input_6" type="text" name="phone" placeholder=" 市話(選填) ">
+			</div>	
+
+			<div id="register-page-new">
+				送出
+			</div>
+
+
 		</div>
 	</div>
 	
@@ -203,7 +255,7 @@ include_once("utf8_header.php");
 			
 			<div id="tag"><!--首頁大圖上方標籤放置區塊-->
 				<ul>
-					<li class="tag-title">NewArrival</li>
+					<li class="tag-title">New Arrival</li>
 				</ul>
 			</div>
 			
@@ -279,7 +331,24 @@ EOT;
 
                 ?>
 
+
+				<li id="sign-in">
+					<i class="fa fa-sign-in" aria-hidden="true"></i>  
+					&nbsp;登入/申請帳號
+				</li>
+
+				<li id="membercenter">
+					<i class="fa fa-bookmark" aria-hidden="true"></i>   
+					&nbsp;會員中心
+				</li>
+
+				<li id="sign-out">
+					<i class="fa fa-sign-out" aria-hidden="true"></i>   
+					&nbsp;登出
+				</li>
+
 				
+
 			</ul>
 
 			<div class="clearfix"></div><!--ul只可與li搭配,所以clearfix要放外面-->
@@ -300,11 +369,11 @@ EOT;
 					  </div>
 
 					  <div class="item">
-						<img src="images/111.jpg" alt="Chania">
+						<img src="images/222.jpg" alt="Chania">
 					  </div>
 					
 					  <div class="item">
-						<img src="images/111.jpg" alt="flower">
+						<img src="images/333.jpg" alt="flower">
 					  </div>
 
 					</div>
@@ -369,11 +438,11 @@ EOT;
 					
 								<div class="nav-show"><!--商品呈現導覽列-->
 
-									<div class="buy-instantly"><!--導覽列左方按鈕-->
-										<span class="buy-instantly-button">
-											<a href="checkbill.html">Buy it !</a>
-										</span>
-									</div>
+									<a href="checkbill.html">
+										<div class="buy-instantly"><!--導覽列左方按鈕-->
+											結帳
+										</div>
+									</a>
 	     
 									
 									<div class="shopping-cart"><!--導覽列右方按鈕-->
@@ -660,6 +729,43 @@ function fbLogout(){
   });
 
 </script>
+
+
+<script>
+	//pw-back page跳出
+	$(document).ready(function(){
+
+		$("#login-page-forget").click(function(){
+
+		$("#login-page").hide();
+			$("#pw-back-page").fadeIn(1000);
+				//登入註冊頁面取消
+			$("#pw-back-cancel").click(function(){
+				$("#pw-back-page,.login-background-color").fadeOut();
+			});
+
+			});
+		});
+
+	//register page跳出
+	$(document).ready(function(){
+
+		$("#login-page-new").click(function(){
+
+		$("#login-page").hide();
+			$("#register-page").fadeIn(1000);
+				//登入註冊頁面取消
+			$("#register-cancel").click(function(){
+				$("#register-page,.login-background-color").fadeOut();
+			});
+
+			});
+		});
+
+
+</script>
+
+
 
 
 </body>
