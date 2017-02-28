@@ -130,8 +130,12 @@ include_once("utf8_header.php");
 			
 
 				
-				<button id="log_in_with_facebook">Log In With FaceBook</button>
-				<button onClick="fbLogout();">Log Out With FaceBook</button>
+				<button id="log_in_with_facebook">
+					<span>
+						<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+						使用Facebook登入
+					</span>
+				</button>
 
 				<div id="status">
 				</div>
@@ -330,24 +334,6 @@ EOT;
                 	echo($content);
 
                 ?>
-
-
-				<li id="sign-in">
-					<i class="fa fa-sign-in" aria-hidden="true"></i>  
-					&nbsp;登入/申請帳號
-				</li>
-
-				<li id="membercenter">
-					<i class="fa fa-bookmark" aria-hidden="true"></i>   
-					&nbsp;會員中心
-				</li>
-
-				<li id="sign-out">
-					<i class="fa fa-sign-out" aria-hidden="true"></i>   
-					&nbsp;登出
-				</li>
-
-				
 
 			</ul>
 
