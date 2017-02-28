@@ -853,6 +853,17 @@ font-family:myFirstFont;
 						border:1px solid #EEE;
 }
 
+#log_in_with_facebook{width:250px;
+border:1px solid white;
+background-color: #4267B2;
+color:white;
+height:30px;
+vertical-align: middle;
+font-size:10pt;
+margin-top:30px;
+border-radius:3px;
+}
+
 #login-page-nav{
 				font-size:10pt;
 				margin-top:30px;
