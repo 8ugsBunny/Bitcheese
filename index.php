@@ -92,13 +92,11 @@ include_once("utf8_header.php");
 			<div id="login-page-logo">
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
+
 		
 			<div id="login-page-info">
-
-			
-
-				
-				<button id="log_in_with_facebook">
+	
+				<button type="botton" id="log_in_with_facebook">
 					<span>
 						<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
 						使用Facebook登入
@@ -108,15 +106,21 @@ include_once("utf8_header.php");
 				<div id="status">
 				</div>
 
-
-				<input class="input_1" type="text" name="email" placeholder=" 輸入信箱 ">
-				<input class="input_2" type="text" name="password" placeholder=" 密碼 ">
+				
+					<form id="login_form" method="POST" action="log_in.php">
+						<input class="input_1" type="text" name="email_login" placeholder=" 輸入信箱 ">
+						<input class="input_2" type="password" name="password_login" placeholder=" 密碼 ">
+						<input type="hidden" name="log_in" value="log_in">
+					</form>
+				
 
 			</div>
+				
+				<div id="login-page-nav">
+					登入
+				</div>
+		
 			
-			<div id="login-page-nav">
-				登入
-			</div>
 		
 			<div id="login-page-forget">
 				忘記密碼
@@ -176,19 +180,22 @@ include_once("utf8_header.php");
 			<div id="register-page-logo">
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
-		
+
+		<form id="register_form" method="POST" action="sign_up.php">
 			<div id="register-page-info">
 				<input class="input_1" type="text" name="email" placeholder=" E-mail ">
-				<input class="input_2" type="text" name="password" placeholder=" 密碼 ">
-				<input class="input_3" type="text" name="re-password" placeholder=" 確認密碼">
+				<input class="input_2" type="password" name="password" placeholder=" 密碼 ">
+				<input class="input_3" type="password" name="retype_password" placeholder=" 確認密碼">
 				<input class="input_4" type="text" name="name" placeholder=" 使用者名稱 ">
-				<input class="input_5" type="text" name="phone" placeholder=" 手機 ">
+				<input class="input_5" type="text" name="mobileNum" placeholder=" 手機 ">
 				<input class="input_6" type="text" name="phone" placeholder=" 市話(選填) ">
+				<input type="hidden" name="sign_up" value="sign_up">
 			</div>	
 
 			<div id="register-page-new">
 				送出
 			</div>
+		</form>
 
 
 		</div>
@@ -451,6 +458,7 @@ echo($content);
 <script type="text/javascript">
 		$(document).ready(function(){
 
+
 			//購物車數量增減按鈕
 			$( ".spinner_for_sp_cart" ).spinner();
 		
@@ -464,6 +472,36 @@ echo($content);
 			
 			$grid.imagesLoaded().progress( function() {
 			  $grid.masonry();
+			});
+
+
+			/***************Infinte Scroll*******************************/
+			var start = 15;//下限
+			var limit = 30;//上限
+			var interval = 15;//一次取的商品數量
+			$(window).scroll(function() {
+				if($(window).scrollTop() == $(document).height() - $(window).height()){
+					//$('#loader').show();
+					$.ajax({
+							url: "infinite_scroll.php", 
+							type: "POST",
+							data: {start: start,
+								   limit: limit
+								  }
+					}).done(function(data){
+						console.log(data);
+						start = start + interval;
+						limit = limit + interval;
+						console.log("start: " + start + ",limit: " + limit);
+						var $content = $(data);
+						$grid.append( $content ).masonry( 'appended', $content);
+					}).fail(function(jqXHR, textStatus, errorThrown){
+						console.log(jqXHR);
+					    console.log(textStatus);
+			    		console.log(errorThrown);
+					});
+					
+				}
 			});
 			
 			//grid-item上背景色
@@ -577,7 +615,17 @@ echo($content);
 		});
 
 	});
-		
+	//普通註冊和登入
+	$("#register-page-new").click(function(e){
+		e.preventDefault();
+		$("#register_form").submit();
+	});
+
+	$("#login-page-nav").click(function(e){
+		e.preventDefault();
+		$("#login_form").submit();
+	});
+
 	
 </script>
 
@@ -630,7 +678,7 @@ FB.api('/me','get', {fields: 'id, name, email, gender, locale, picture'}, functi
 function fbLogout(){
 	FB.logout(function(response) {
   			console.log(response);
-  			window.location.href="log_out.php";//跳轉到log_out.php刪除session和cookie
+  			window.location.href = "log_out.php";//跳轉到log_out.php刪除session和cookie
   	});
 }
 
@@ -679,7 +727,14 @@ function fbLogout(){
 
   //會員登出和FB登出
   $("#sign-out").click(function(e){
-  		fbLogout();	
+  	FB.getLoginStatus(function(response){
+  		if(response.status === "connected"){
+  			fbLogout();	
+  		}
+  		else{
+  			window.location.href = "log_out.php";//跳轉到log_out.php刪除session和cookie
+  		}
+  	});		
   });
 
 </script>
