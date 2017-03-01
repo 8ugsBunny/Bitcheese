@@ -833,7 +833,7 @@ font-family:myFirstFont;
 					height:42px;
 }
 
-#login-page-info>.input_1{
+#login-page-info>form>.input_1{
 						display:block;
 						margin:0 auto;
 						margin-top:30px;
@@ -843,7 +843,7 @@ font-family:myFirstFont;
 						border:1px solid #EEE;
 }
 
-#login-page-info>.input_2{
+#login-page-info>form>.input_2{
 						display:block;
 						margin:0 auto;
 						margin-top:5px;
