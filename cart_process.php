@@ -74,8 +74,8 @@ if(isset($_POST["load_cart"]) && $_POST["load_cart"]==1)
 			//$product_color = $product["product_color"];
 			//$product_size = $product["product_size"];
 			
-			$cart_content .=  ' <div> 
-									<a href="#" class="remove-item" data-code="'.$product_code.'">&times;</a>
+			$cart_content .=  ' <div class="for_the_border"> 
+									<a href="#" class="remove-item" data-code="'.$product_code.'">&times;<span>移除商品<span></a>
 								    <div class="purchase-pic">
 										<img src="product_images/'.$product_code.'/1.jpg"/>
 									</div>
@@ -108,7 +108,7 @@ if(isset($_POST["load_cart"]) && $_POST["load_cart"]==1)
 		
 		die($cart_content); //exit and output content
 	}else{
-		die("購物車內無商品"); //we have empty cart
+		die("<div id='empty_tip'>購物車內無商品</div>"); //we have empty cart
 	}
 }
 
