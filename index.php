@@ -45,64 +45,32 @@ include_once("utf8_header.php");
 
 	
 	<div id="left-panel"><!--左側鑲版-->
-		<div id="category-title" class="special-font">Bitcheese</div>
-			<hr class="horizon">
+		<div id="category-title" class="special-font">&nbsp;&nbsp;<i class="fa fa-bars" aria-hidden="true"></i>&nbsp;商品分類</div>
 				<ul>
-					<li>Hair</li>
-					<li>withHead</li>
-					<li>Neck</li>
-					<li>bracelet</li>
-					<li>Leg</li>
-					<li>others</li>
-				</ul>
+					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 頭飾</li>
+					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 髮飾</li>
+					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 頸飾</li>
+					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 手鐲</li>
+					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 腳飾</li>
+					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 其他小物</li>
+				</ul> 
 	</div>
 
 	
 	
 	
 	<div id="left-shopping-cart"><!--左側鑲版-->
-		<div id="shopping-cart-title" class="special-font">Bitcheese</div>
-			<hr class="horizon">
+		<div id="shopping-cart-title" class="special-font"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;購物車</div>
 				
 			<div id="for_scroll">
+					
+					<div id="purchase-details"></div>
 
-					<div id="purchase-details">
-
-						<div id="purchase-pic">
-							<img src="checkbillpics/mini1.png" alt="" />
-						</div>
-						
-						<div id="purchase-content">
-						 
-						 	<div id="purchase-content-price">
-						 		$450
-						 	</div>
-						 
-						 	<div id="pruchase-content-amount">
-						 			數量<br>
-						 				<select>					 
-						 					<option value="1">1</option>
-						  					<option value="2">2</option>
-						  	 				<option value="3">3</option>
-						   	 				<option value="4">4</option>
-						 				</select>
-						 	</div>
-
-						</div>
-
-						<div class="clearfix"></div>
-						
-						
-					</div>
+			</div>
 				
 				
-				</div>
-				
-				<div id="purchase-tips-details">
-				</div>
-
-
-				<div id="purchase-button">Check Out Bill</div>
+		
+				<div id="purchase-button">結帳</div>
 	</div>
 		
 	

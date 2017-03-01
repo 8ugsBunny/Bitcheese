@@ -177,6 +177,35 @@ width:350px;}
 
 /*******結帳頁面check-bill*******/
 
+
+#checkbill_title{font-family: myfirstfont;
+color:#EEE;
+font-size:30pt;
+margin:0 auto ;
+width:50%;
+text-align: center;
+margin-top:30px;}
+
+#steps_indicator{width:50%; margin:0 auto;margin-top:30px;border-radius:3px;
+border:2px solid #BD9F87;text-align: center; margin-bottom: 50px;}
+#step_1{float:left;width:50%;padding:10px;border-right:2px solid #BD9F87; background-color: #003D60}
+#step_2{float:left;width:50%;padding:10px;background-color: #EEE;}
+
+.span_1{font-family: myfirstfont;
+font-size:13pt;
+color:white;}
+
+#step_1>.span_2{color:white;font-size:10pt;}
+
+#step_2>.span_1{color:#8c8c8c;color:rgba(140, 140, 140, 0.5);}
+
+#step_2>.span_2{
+	 font-size:10pt;
+	  color:rgba(140, 140, 140, 0.5);
+}
+
+
+
 #check-bill-container{width:100%; text-align: center;
 border-top:1px solid #EEE;
 border-bottom:1px solid #EEE;
@@ -217,18 +246,24 @@ border:1px solid #EEE;
 #check-bill-total-result{float:left;}
 
 
-#delivery_method{width: 100%;margin-top:30px;margin-bottom:30px;}
+#delivery_method{width: 100%;margin-top:80px;margin-bottom:10px;}
 #delivery_method_tag{
-	width:25%;border-top:1px solid #EEE;border-left:1px solid #EEE;border-right:1px solid #EEE;
+	width:25%;border-top:2px solid #BD9F87;border-left:2px solid #BD9F87;border-right:2px solid #BD9F87;
 	padding:5px;
 	font-size:16pt;
 	text-align: center;
 	background-color:#003D60;
 	color:white;
-
+	border-top-right-radius:3px;
+	border-top-left-radius:3px;
 }
 
-#delivery_method_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:1px solid #003D60;}
+#delivery_method_tag>img{width:20px ;height:20px; padding-top:-100px;}
+
+
+
+
+#delivery_method_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:2px solid #BD9F87;}
 
 #delivery_method_BC{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
 #delivery_method_711{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
@@ -240,25 +275,27 @@ border:1px solid #EEE;
 #delivery_method_FM>input{width:20px; height:20px;vertical-align:middle;}
 
 
-#delivery_method_BC:hover{background-color:#b3b3b3;}
-#delivery_method_711:hover{background-color:#b3b3b3;}
-#delivery_method_FM:hover{background-color:#b3b3b3;}
+#delivery_method_BC:hover{background-color:rgba(179, 179, 179, 0.1);}
+#delivery_method_711:hover{background-color:rgba(179, 179, 179, 0.1);}
+#delivery_method_FM:hover{background-color:rgba(179, 179, 179, 0.1);}
 
 
 
 
-#payment_method{width: 100%; margin-top:30px;margin-bottom:30px;}
+#payment_method{width:100%; margin-top:30px;}
 #payment_method_tag{
-	width:25%;border-top:1px solid #EEE;border-left:1px solid #EEE;border-right:1px solid #EEE;
+	width:25%;border-top:2px solid #BD9F87;border-left:2px solid #BD9F87;border-right:2px solid #BD9F87;
 	padding:5px;
 	font-size:16pt;
 	text-align: center;
 	background-color:#003D60;
 	color:white;
+	border-top-right-radius:2px;
+	border-top-left-radius:2px; 
 
 }
 
-#payment_method_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:1px solid #003D60;}
+#payment_method_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:2px solid #BD9F87;}
 
 #payment_method_after{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
 #payment_method_before{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
@@ -270,16 +307,16 @@ border:1px solid #EEE;
 #payment_method_card>input{width:20px; height:20px;vertical-align:middle;}
 #payment_method_ticket>input{width:20px; height:20px;vertical-align:middle;}
 
-#payment_method_after:hover{background-color:#b3b3b3;}
-#payment_method_before:hover{background-color:#b3b3b3;}
-#payment_method_card:hover{background-color:#b3b3b3;}
-#payment_method_ticket:hover{background-color:#b3b3b3;}
+#payment_method_after:hover{background-color:rgba(179, 179, 179, 0.1);}
+#payment_method_before:hover{background-color:rgba(179, 179, 179, 0.1);}
+#payment_method_card:hover{background-color:rgba(179, 179, 179, 0.1);}
+#payment_method_ticket:hover{background-color:rgba(179, 179, 179, 0.1);}
 
 
 
-#bill_info{width: 100%; margin-top:30px;margin-bottom:30px;}
+#bill_info{width: 100%; margin-top:10px;}
 #bill_info_tag{
-	width:25%;border-top:1px solid #EEE;border-left:1px solid #EEE;border-right:1px solid #EEE;
+	width:25%;border-top:2px solid #BD9F87;border-left:2px solid #BD9F87;border-right:2px solid #BD9F87;
 	padding:5px;
 	font-size:16pt;
 	text-align: center;
@@ -288,7 +325,7 @@ border:1px solid #EEE;
 
 }
 
-#bill_info_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:1px solid #003D60;}
+#bill_info_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:2px solid #BD9F87;}
 
 #bill_info_name{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
 #bill_info_phone{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
@@ -296,11 +333,11 @@ border:1px solid #EEE;
 #bill_info_711{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px solid  #EEE;}
 #bill_info_FM{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px;}
 
-#bill_info_name:hover{background-color:#b3b3b3;}
-#bill_info_phone:hover{background-color:#b3b3b3;}
-#bill_info_BC:hover{background-color:#b3b3b3;}
-#bill_info_711:hover{background-color:#b3b3b3;}
-#bill_info_FM:hover{background-color:#b3b3b3;}
+#bill_info_name:hover{background-color:rgba(179, 179, 179, 0.1);}
+#bill_info_phone:hover{background-color:rgba(179, 179, 179, 0.1);}
+#bill_info_BC:hover{background-color:rgba(179, 179, 179, 0.1);}
+#bill_info_711:hover{background-color:rgba(179, 179, 179, 0.1);}
+#bill_info_FM:hover{background-color:rgba(179, 179, 179, 0.1);}
 
 
 #bill_info_name{letter-spacing: 10px;}
@@ -667,32 +704,44 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 			position:fixed;
 			/*display: none;*/
 			left: -20%;/*0202*/
-			border-right:solid 1px;
-			border-color:#BD9F87;
-			text-align:center;
+			border-right:2px solid #BD9F87;
 			box-shadow: 1px 1px 1px #808080;
-	
 }	
 
 
 
 #category-title{
-				font-size:30pt;
+				border-bottom:2px solid #BD9F87;
+				font-size:15pt;
 				color:white;
+				padding-top:5px;
+				padding-bottom:5px;
+				font-family:"微軟正黑體","Microsoft JhengHei";
 }
 	
 #left-panel > ul{
 	list-style-type:none;
-	font-family:myFirstFont;
-	font-size:20pt;
+	font-size:13pt;
 	color:white;
 	padding-left:0;
+	line-height: 30px;　
+}
+
+#left-panel  li:hover{
+						background-color: rgba(179, 179, 179, 0.1);
 }
 
 
 
 /******left-shopping-cart*****/
+
+#left-shopping-cart a:hover{text-decoration: none;
+color:white;}
+
+#left-shopping-cart a span {font-size:10pt;}
+
 #left-shopping-cart{
+			text-align: center;
 			width:20%;
 			height:100%;
 			background-color:rgba(6, 40, 57 ,1);
@@ -700,30 +749,38 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 			position:fixed;
 			/*display: none;*/
 			left: -20%;/*0202*/
-			border-right:solid 1px;
-			border-color:#BD9F87;
-			text-align:center;
+			border-right:1px solid #BD9F87;
 			box-shadow: 1px 1px 1px #808080;
+			font-family:"微軟正黑體","Microsoft JhengHei";
 
 }	
 
 #shopping-cart-title{
-				font-size:30pt;
+				font-size:15pt;
 				color:white;
+				padding:5px;
+				font-family:"微軟正黑體","Microsoft JhengHei";
+				border-bottom:1px solid #BD9F87;
+				text-align: left;
+
 }
 	
-#left-shopping-cart > ul{
+#left-shopping-cart #empty_tip{color:white;font-size:13pt;padding:5px;}
+
+
+
+/*#left-shopping-cart > ul{
 	list-style-type:none;
-	font-family:myFirstFont;
-	font-size:20pt;
+	font-size:13pt;
 	color:white;
 	padding-left:0;
-}
+}*/
 
 #for_scroll{
 		overflow:scroll;
 		overflow-x:hidden;
-		height:55%;
+		height:80%;
+		background-color: #fff;
 }
 
 .purchase-details{
@@ -735,12 +792,14 @@ text-align:left;
 .purchase-pic{
 float:left;
 width:50%;
+
 }
+
+.for_the_border{border-bottom:1px solid #EEE;}
 
 .purchase-pic>img{
 	width:100%;
-	height:150px;
-	border-radius:3px;
+	height:140px;
 }
 
 
@@ -751,16 +810,20 @@ font-size:13pt;
 color:white;
 text-align:center;}
 
+.remove-item{color:#BD9F87;font-size:13pt;}
+
 .purchase-content select {width:70%;
-color:black;}
+color:black;
+}
+
+.pruchase-content-amount{padding-top:15px;}
 
 .purchase-content-price
 {padding-top:10px;
 padding-bottom:10px;
-background-color:#777777;
-border-top:1px solid #BD9F87;
-border-bottom:1px solid #BD9F87;
-border-radius:2px;}	
+background-color:#b3b3b3;
+border-radius:2px;
+font-size:12pt;}	
 
 .purchase-tips-details{
 	/* border-top:1px solid #BD9F87; */
@@ -771,12 +834,14 @@ border-radius:2px;}
 	padding:25px;
 }
 
-.purchase-button{border-top:1px solid #BD9F87;
-font-family:myFirstFont;
-	font-size:15pt;
-	color:white;
+#purchase-button{
+
+	font-family:"微軟正黑體","Microsoft JhengHei";
+	font-size:13pt;
+	color:#595959;
 	text-align:center;
-		padding:25px;
+	padding:15px;
+	background-color: #EEE;
 }
 
 .spinner_for_sp_cart{/*購物車增減數量按鈕*/
