@@ -211,29 +211,28 @@ border-top:1px solid #EEE;
 border-bottom:1px solid #EEE;
 border-left:1px solid #EEE;}
 
-.check-bill-pic{width:25%;}
-.check-bill-pic>img{width:100%;height:auto;}
-.check-bill-title{width:25%;}
-.check-bill-amount{width:25%;}
-.check-bill-price{width:25%;}
+#check-bill-pic{width:25%;border-right:1px solid #EEE;}
+#check-bill-pic>img{width:100%;height:auto;}
+#check-bill-title{width:25%;border-right:1px solid #EEE;}
+#check-bill-amount{width:25%;border-right:1px solid #EEE;}
+#check-bill-price{width:25%;border-right:1px solid #EEE;}
 
-.check-bill-pic,
-.check-bill-title,
-.check-bill-amount,
-.check-bill-price{float:left;}
+#check-bill-pic,
+#check-bill-title,
+#check-bill-amount,
+#check-bill-price{float:left;}
 
 
-.check-bill-coupon{width:75%;margin-left:25%;text-align: center;
+#check-bill-coupon{width:75%;margin-left:25%;text-align: center;
 border:1px solid #EEE;
 }
-.check-bill-coupon-title{width:33%;}
+#check-bill-coupon-title{width:33%;}
+#check-bill-coupon-serial{width:33%;}
+#check-bill-coupon-result{width:33%;}
 
-.check-bill-coupon-serial{width:33%;}
-.check-bill-coupon-result{width:33%;}
-
-.check-bill-coupon-title,
-.check-bill-coupon-serial,
-.check-bill-coupon-result{float:left;}
+#check-bill-coupon-title,
+#check-bill-coupon-serial,
+#check-bill-coupon-result{float:left;}
 
 
 
@@ -698,37 +697,53 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 
 
 #left-panel{
-			width:20%;
+			width:25%;
 			height:100%;
-			background-color:rgba(6, 40, 57 ,1);
+			background-color:white;
 			z-index:1;
 			position:fixed;
 			/*display: none;*/
-			left: -20%;/*0202*/
-			border-right:2px solid #BD9F87;
-			box-shadow: 1px 1px 1px #808080;
+			left: -25%;/*0202*/
+			box-shadow: 1px 1px 1px black;
 }	
 
 
 
 #category-title{
-				border-bottom:2px solid #BD9F87;
 				font-size:15pt;
-				color:white;
 				padding-top:5px;
 				padding-bottom:5px;
-				font-family:"微軟正黑體","Microsoft JhengHei";
+				font-family:"Gotham Light";
+				background-color:#E8B7CC;
 }
+
+#category-title>span{font-family:"微軟正黑體","Microsoft JhengHei"; 
+font-size:10pt;
+font-family:"Gotham Light";}
+
 	
 #left-panel > ul{
 	list-style-type:none;
-	font-size:13pt;
-	color:white;
+	font-size:10pt;
+	color:#666666;
 	padding-left:0;
 	line-height: 30px;　
+
 }
 
-#left-panel  li:hover{
+#left-panel .left-panel-eng{
+				font-family:"Gotham Light";
+				font-size:10pt;
+
+}
+
+#left-panel .special-bg{
+	background-color: #a6a6a6;
+	color:white;
+}
+
+
+#left-panel  .special-item:hover{
 						background-color: rgba(179, 179, 179, 0.1);
 }
 
@@ -736,33 +751,31 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 
 /******left-shopping-cart*****/
 
-#left-shopping-cart a:hover{text-decoration: none;
-color:white;}
+#left-shopping-cart a:hover{text-decoration: none; color: #b3b3b3;}
 
-#left-shopping-cart a span {font-size:10pt;}
+#left-shopping-cart a span {font-size:9pt}
 
 #left-shopping-cart{
 			text-align: center;
-			width:20%;
+			width:25%;
 			height:100%;
-			background-color:rgba(6, 40, 57 ,1);
+			background-color:#E8B7CC;
 			z-index:1;
 			position:fixed;
 			/*display: none;*/
-			left: -20%;/*0202*/
-			border-right:1px solid #BD9F87;
-			box-shadow: 1px 1px 1px #808080;
+			left: -25%;/*0202*/
+			box-shadow: 1px 1px 1px black;
 			font-family:"微軟正黑體","Microsoft JhengHei";
 
 }	
 
 #shopping-cart-title{
 				font-size:15pt;
-				color:white;
 				padding:5px;
-				font-family:"微軟正黑體","Microsoft JhengHei";
-				border-bottom:1px solid #BD9F87;
+				font-family:"Gotham light";
+				border-bottom:1px solid #b3b3b3;
 				text-align: left;
+
 
 }
 	
@@ -787,31 +800,36 @@ color:white;}
 .purchase-details{
 margin-top:5px;
 text-align:left;
+width:100%;
 
 }
 
 .purchase-pic{
 float:left;
-width:50%;
+width:30%;
 
+}
+
+
+.purchase-pic>img{
+	width:100%;
+	height:auto;
 }
 
 .for_the_border{border-bottom:1px solid #EEE;}
 
-.purchase-pic>img{
-	width:100%;
-	height:140px;
-}
-
 
 .purchase-content{
 float:left;
-width:50%;
+width:70%;
 font-size:13pt;
 color:white;
-text-align:center;}
+text-align:center;
+}
 
-.remove-item{color:#BD9F87;font-size:13pt;}
+
+
+.remove-item{color:#BD9F87;font-size:8pt;}
 
 .purchase-content select {width:70%;
 color:black;
@@ -827,8 +845,6 @@ border-radius:2px;
 font-size:12pt;}	
 
 .purchase-tips-details{
-	/* border-top:1px solid #BD9F87; */
-
 	font-size:10pt;
 	color:white;
 	text-align:center;
@@ -839,15 +855,18 @@ font-size:12pt;}
 
 	font-family:"微軟正黑體","Microsoft JhengHei";
 	font-size:13pt;
-	color:#595959;
 	text-align:center;
-	padding:15px;
-	background-color: #EEE;
+	padding:10px;
+	background-color: #fff68f;
+
 }
+
+#purchase-button:hover{color:#b3b3b3;}
+
+#purchase-button a:visited {color:white;}
 
 .spinner_for_sp_cart{/*購物車增減數量按鈕*/
 	width: 20px;
-	
 }
 
 /*******login-page-css*****/
@@ -1091,7 +1110,8 @@ border-radius:3px;
 }
 
 #register-page-info>.input_1{
-	
+						display:block;
+						margin:0 auto;
 						margin-top:30px;
 						width:50%;
 						height:30px;
@@ -1100,8 +1120,8 @@ border-radius:3px;
 }
 
 #register-page-info>.input_2{
-				
-			
+						display:block;
+						margin:0 auto;
 						margin-top:5px;
 						width:50%;
 						height:30px;
@@ -1110,8 +1130,8 @@ border-radius:3px;
 }
 
 #register-page-info>.input_3{
-					
-				
+						display:block;
+						margin:0 auto;
 						margin-top:5px;
 						width:50%;
 						height:30px;
@@ -1120,7 +1140,8 @@ border-radius:3px;
 }
 
 #register-page-info>.input_4{
-					
+						display:block;
+						margin:0 auto;
 						margin-top:5px;
 						width:50%;
 						height:30px;
@@ -1129,7 +1150,8 @@ border-radius:3px;
 }
 
 #register-page-info>.input_5{
-					
+						display:block;
+						margin:0 auto;
 						margin-top:5px;
 						width:50%;
 						height:30px;
@@ -1138,7 +1160,8 @@ border-radius:3px;
 }
 
 #register-page-info>.input_6{
-	
+						display:block;
+						margin:0 auto;
 						margin-top:5px;
 						width:50%;
 						height:30px;
@@ -1446,15 +1469,6 @@ height:auto;}
 				color:#595959;}
 
 #masonry a:visited{color:#595959;}
-
-#loader{
-
-	width:100px;
-	margin:0 auto;
-	display: none;
-	/*width: 200px;
-	margin: 0 auto;*/
-}
 
 
 
