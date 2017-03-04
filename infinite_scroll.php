@@ -1,36 +1,36 @@
 <?php
-include("config.inc.php");
+/*include("config.inc.php");
 
 $start = filter_var($_POST['start'], FILTER_SANITIZE_NUMBER_INT);
 $limit = filter_var($_POST['limit'], FILTER_SANITIZE_NUMBER_INT);
-$qry = "SELECT * FROM bitcheese_products LIMIT 0, 12";
+$qry = "SELECT * FROM bitcheese_products LIMIT $start, $limit";
 $stmt = $mysqli_conn -> query($qry);
-//echo($qry);
-$content_1="";
+$stmt -> execute();
+echo($qry);
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-$content_1 .= <<<EOT
+$content_1 = <<<EOT
 		<div class="grid-item">
 				<div class="merchandise-show"><!--商品呈現大div-->
 				
-					<img class="pic-show-pic"  src="product_images/{$row["product_code"]}/1.jpg"	alt="accessories" />  
+					<img class="pic-show-pic"  src="9.jpg"	alt="accessories" />  
 					
 					<!--商品文案呈現div-->
 					<div class="text-show">
 						
 						<!--商品文案標題-->	
 						<h1 class="merchandise-title">
-							{$row["product_name"]}<br>
+							名偵探摳男的小星星<br>
 						</h1>
 						
 						<!--商品文案內容-->
 						<h2 class="merchandise-content">
-						  {$row["product_desc"]}
+						  即刻雋永 立即擁有
 						</h2>
 						
 						<!--商品文案售價-->
 						<h1 class="merchandise-price">
 						<span class="line-through"></span><br/>
-							NT.{$row['price']}
+							NT.149
 						</h1>
 					
 					</div>
@@ -70,9 +70,8 @@ $content_1 .= <<<EOT
 		</div>
 			
 EOT;
-}
+}*/
 
-die($content_1);
 
 	$content = <<<EOT
 	<div class="grid-item grid-item--height3">
@@ -321,7 +320,5 @@ die($content_1);
 				</div>
 			</div>
 EOT;
-
-/*for($i=0; $i<5; $i++)
-echo($content);*/
+echo($content);
 ?>			
