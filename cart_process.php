@@ -75,21 +75,28 @@ if(isset($_POST["load_cart"]) && $_POST["load_cart"]==1)
 			//$product_size = $product["product_size"];
 			
 			$cart_content .=  ' <div class="for_the_border"> 
-									<a href="#" class="remove-item" data-code="'.$product_code.'">&times;<span>移除商品<span></a>
+								
 								    <div class="purchase-pic">
 										<img src="product_images/'.$product_code.'/1.jpg"/>
 									</div>
 
 									<div class="purchase-content">
 								 
-								 		<div class="purchase-content-price">NT.'.$product_price.'</div>
+								 		<div class="purchase-content-price">單價 NT.'.$product_price.'</div>
 								 
 									 	<div class="pruchase-content-amount">
 									 		<input class="spinner_for_sp_cart" data-code="'.$product_code.'" name="qty" value="'.$product_qty.'">
 									 	</div>
 
+									 	<a href="#" class="remove-item" data-code="'.$product_code.'">&times;<span>移除商品<span></a>
+
+
 									</div>
+
+									
+
 									<div class="clearfix"></div>
+
 									
 								</div>';
 			

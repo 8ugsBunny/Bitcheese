@@ -1,5 +1,5 @@
 <?php
-include("config.inc.php");
+/*include("config.inc.php");
 
 $start = filter_var($_POST['start'], FILTER_SANITIZE_NUMBER_INT);
 $limit = filter_var($_POST['limit'], FILTER_SANITIZE_NUMBER_INT);
@@ -70,14 +70,14 @@ $content_1 = <<<EOT
 		</div>
 			
 EOT;
-}
+}*/
 
 
 	$content = <<<EOT
 	<div class="grid-item grid-item--height3">
 				<div class="merchandise-show"><!--商品呈現大div-->
 				
-					<img class="pic-show-pic"  src="9.jpg"	alt="accessories" />  
+					<img class="pic-show-pic"  src="1.jpg"	alt="accessories" />  
 					
 					<!--商品文案呈現div-->
 					<div class="text-show">
@@ -140,7 +140,7 @@ EOT;
 							
 							<div class="merchandise-show"><!--商品呈現大div-->
 				
-					<img class="pic-show-pic"  src="10.jpg"	alt="accessories" />  
+					<img class="pic-show-pic"  src="3.jpg"	alt="accessories" />  
 					
 					<!--商品文案呈現div-->
 					<div class="text-show">
@@ -201,7 +201,7 @@ EOT;
 							
 							<div class="merchandise-show"><!--商品呈現大div-->
 				
-					<img class="pic-show-pic"  src="11.jpg"	alt="accessories" />  
+					<img class="pic-show-pic"  src="2.jpg"	alt="accessories" />  
 					
 					<!--商品文案呈現div-->
 					<div class="text-show">
@@ -263,7 +263,7 @@ EOT;
 							
 							<div class="merchandise-show"><!--商品呈現大div-->
 				
-					<img class="pic-show-pic"  src="12.jpg"	alt="accessories" />  
+					<img class="pic-show-pic"  src="1.jpg"	alt="accessories" />  
 					
 					<!--商品文案呈現div-->
 					<div class="text-show">
@@ -320,5 +320,5 @@ EOT;
 				</div>
 			</div>
 EOT;
-//echo($content);
+echo($content);
 ?>			
