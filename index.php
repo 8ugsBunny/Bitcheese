@@ -45,64 +45,139 @@ include_once("utf8_header.php");
 
 	
 	<div id="left-panel"><!--左側鑲版-->
-		<div id="category-title" class="special-font">Bitcheese</div>
-			<hr class="horizon">
+		<div id="category-title" class="special-font">
+			&nbsp;Category&nbsp;
+		</div>
 				<ul>
-					<li>Hair</li>
-					<li>withHead</li>
-					<li>Neck</li>
-					<li>bracelet</li>
-					<li>Leg</li>
-					<li>others</li>
+					<li class="special-bg">
+					&nbsp;&nbsp;
+					<span class="left-panel-eng">Series</span>
+					&nbsp;
+					<span>系列精選</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>脖子系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Neck Series</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>手鍊系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Bracelets</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>髮圈系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Scrunchs</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>髮夾系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Snap Clip</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>腳鍊系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Strap Series</span>
+					</li>
 				</ul>
+
+				<ul>
+					<li class="special-bg">
+					&nbsp;&nbsp;
+					<span class="left-panel-eng">NewArrival</span>
+					&nbsp;
+					<span>新品到貨</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>幾何優雅-個性手鍊</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>幾何優雅-個性頸鍊</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>爵士藍調-髮箍</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>少女情懷-髮箍</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>精緻典雅-耳環</span>
+					</li>
+				</ul> 
+
+				<ul>
+					<li class="special-bg">
+					&nbsp;&nbsp;
+					<span class="left-panel-eng">Bonus</span>
+					&nbsp;
+					<span>活動特惠商品</span>
+					</li>
+					
+				
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>49起 &nbsp;單品特惠</span>
+					</li>
+
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>149起 耳環特惠</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>299起 髮箍特惠</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>買一送一系列</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>任選一樣 包裹免運</span>
+					</li>
+				</ul> 
 	</div>
 
 	
 	
 	
 	<div id="left-shopping-cart"><!--左側鑲版-->
-		<div id="shopping-cart-title" class="special-font">Bitcheese</div>
-			<hr class="horizon">
+		<div id="shopping-cart-title" class="special-font">&nbsp;ShoppingCart</div>
 				
 			<div id="for_scroll">
+					
+					<div id="purchase-details"></div>
 
-					<div id="purchase-details">
-
-						<div id="purchase-pic">
-							<img src="checkbillpics/mini1.png" alt="" />
-						</div>
-						
-						<div id="purchase-content">
-						 
-						 	<div id="purchase-content-price">
-						 		$450
-						 	</div>
-						 
-						 	<div id="pruchase-content-amount">
-						 			數量<br>
-						 				<select>					 
-						 					<option value="1">1</option>
-						  					<option value="2">2</option>
-						  	 				<option value="3">3</option>
-						   	 				<option value="4">4</option>
-						 				</select>
-						 	</div>
-
-						</div>
-
-						<div class="clearfix"></div>
-						
-						
-					</div>
+			</div>
 				
 				
-				</div>
-				
-				<div id="purchase-tips-details">
-				</div>
-
-
-				<div id="purchase-button">Check Out Bill</div>
+		
+				<div id="purchase-button"><i class="fa fa-usd" aria-hidden="true"></i>&nbsp;結帳</div>
 	</div>
 		
 	
@@ -479,12 +554,11 @@ echo($content);
 				
 </div> <!--container結束-->
 
-<div
-  class="fb-like"
+<!--  class="fb-like"
   data-share="true"
   data-width="450"
   data-show-faces="true">
-</div>
+</div>-->
 
 
 <script type="text/javascript">
@@ -511,9 +585,13 @@ echo($content);
 			var start = 15;//下限
 			var limit = 30;//上限
 			var interval = 15;//一次取的商品數量
-			$(window).scroll(function() {
-				if($(window).scrollTop() == $(document).height() - $(window).height()){
+		$(window).data('ajaxready', true).scroll(function(e) {
+    		if ($(window).data('ajaxready') == false) return;
+
+		
+				if($(window).scrollTop() >= $(document).height() - $(window).height() - 100){
 					//$('#loader').show();
+					$(window).data('ajaxready', false);
 					$.ajax({
 							url: "infinite_scroll.php", 
 							type: "POST",
@@ -527,12 +605,15 @@ echo($content);
 						console.log("start: " + start + ",limit: " + limit);
 						var $content = $(data);
 						$grid.append( $content ).masonry( 'appended', $content);
+						$(window).data('ajaxready', true);
+						$grid.imagesLoaded().progress( function() {
+			  			$grid.masonry();
+			});
 					}).fail(function(jqXHR, textStatus, errorThrown){
 						console.log(jqXHR);
 					    console.log(textStatus);
 			    		console.log(errorThrown);
-					});
-					
+					});	
 				}
 			});
 			
