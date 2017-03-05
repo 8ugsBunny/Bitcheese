@@ -41,10 +41,32 @@ include_once("utf8_header.php");
 
 
 <body id="eliminate-other-css">
-	
+
+	<div id="aside_button"><!--右下方按鈕區塊開始-->
+
+		<div id="Bonus_show"><!--優惠活動提示按鈕-->
+			優惠<br>
+			商品
+		</div>
+
+		<div id="custom_service"><!--線上客服按鈕-->
+			線上<br>
+			客服
+		</div>
+		
+		<div id="back_to_top"><!--回到上方按鈕-->
+			<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		</div>
+
+	</div><!--右下方按鈕區塊結束-->
+
+
+
+
 
 	
 	<div id="left-panel"><!--左側鑲版-->
+
 		<div id="category-title" class="special-font">
 			&nbsp;Category&nbsp;
 		</div>
@@ -186,127 +208,134 @@ include_once("utf8_header.php");
 	<div class="login-background-color"></div><!--登入頁面背景顏色div-->
 	
 	
-	
-	<div id="login-page"><!--login-page-->
+	<!--登入頁面-->
+	<div id="login-page">
 
-		<div id="login-page-content">
+		<div id="login-page-content"><!--登入頁面大區塊開始-->
 
-		 <div class="cancel_button">
-			<i class="fa fa-times" aria-hidden="true" id="log-in-cancel"></i>
-		</div>
+			<div class="cancel_button"><!--取消按鈕-->
+				<i class="fa fa-times" aria-hidden="true" id="log-in-cancel"></i>
+			</div>
 
 			
-			<div id="login-page-logo">
+			<div id="login-page-logo"><!--Logo-->
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 
 		
-			<div id="login-page-info">
+			<div id="login-page-info"><!--輸入登入資料區塊開始-->
 	
-				<button type="botton" id="log_in_with_facebook">
+				<button type="botton" id="log_in_with_facebook"><!--以FB登入-->
 					<span>
 						<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
 						使用Facebook登入
 					</span>
 				</button>
 
-				<div id="status">
-				</div>
+				<div id="login-page-tip">&nbsp;哈囉!
+				</div><!--錯誤提示訊息-->
 
-				
-					<form id="login_form" method="POST" action="log_in.php">
-						<input class="input_1" type="text" name="email_login" placeholder=" 輸入信箱 ">
-						<input class="input_2" type="password" name="password_login" placeholder=" 密碼 ">
-						<input type="hidden" name="log_in" value="log_in">
-					</form>
+				<!--輸入資訊表單-->
+				<form id="login_form" method="POST" action="log_in.php">
+					<input class="input_1" type="text" name="email_login" placeholder=" 輸入信箱 ">
+					<input class="input_2" type="password" name="password_login" placeholder=" 密碼 ">
+					<input type="hidden" name="log_in" value="log_in">
+				</form>
 				
 
+			</div><!--輸入登入資料區塊結束-->
+				
+			
+			<div id="login-page-nav"><!--登入按鈕-->
+				登入
 			</div>
-				
-				<div id="login-page-nav">
-					登入
-				</div>
 		
 			
-		
-			<div id="login-page-forget">
+			<div id="login-page-forget"><!--忘記密碼按鈕-->
 				忘記密碼
 			</div>	
 			
 
-			<div id="login-page-new">
+			<div id="login-page-new"><!--註冊新帳號按鈕-->
 				註冊新帳號
 			</div>
 
 
-		</div>
-	</div>
+		</div><!--登入頁面大區塊結束-->
 
-	<!-- 取回密碼 -->
+	</div><!--登入頁面結束-->
 
-	<div id="pw-back-page"><!--pw-back-->
 
-		<div id="pw-back-page-content">
 
-		 <div class="cancel_button">
-			<i class="fa fa-times" aria-hidden="true" id="pw-back-cancel"></i>
-		</div>
+	<!--取回密碼頁面-->
+
+	<div id="pw-back-page"><!--取回密碼頁面大區塊開始-->
+
+		<div id="pw-back-page-content"><!--內容大區塊開始-->
+
+			<div class="cancel_button"><!--取消按鈕區塊-->
+				<i class="fa fa-times" aria-hidden="true" id="pw-back-cancel"></i>
+			</div>
 
 			
-			<div id="pw-back-page-logo">
+			<div id="pw-back-page-logo"><!--Logo區塊-->
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 
-			<div id="pw-back-page-tip">
+			<div id="pw-back-page-tip"><!--提示訊息區塊-->
 				請輸入您註冊所使用的信箱
 			</div>
 		
-			<div id="pw-back-page-info">
+			<div id="pw-back-page-info"><!--信箱輸入區塊-->
 				<input class="input_1" type="text" name="email" placeholder=" 輸入信箱 ">
 			</div>
 
-			<div id="pw-back-page-new">
+			<div id="pw-back-page-new"><!--取回密碼區塊-->
 				取回密碼
 			</div>
 
 
-		</div>
-	</div>
+		</div><!--內容大區塊結束-->
+	</div><!--取回密碼頁面大區塊結束-->
 
-	<!-- 帳號註冊 -->
 
-	<div id="register-page"><!--register-->
+	<!--帳號註冊頁面-->
 
-		<div id="register-page-content">
+	<div id="register-page"><!--帳號註冊頁面區塊開始-->
 
-		 <div class="cancel_button">
-			<i class="fa fa-times" aria-hidden="true" id="register-cancel"></i>
-		</div>
+		<div id="register-page-content"><!--內容區塊開始-->
 
-			
-			<div id="register-page-logo">
+			<div class="cancel_button"><!--取消按鈕區塊-->
+				<i class="fa fa-times" aria-hidden="true" id="register-cancel"></i>
+			</div>
+
+			<div id="register-page-logo"><!--Logo區塊-->
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 
-		<form id="register_form" method="POST" action="sign_up.php">
-			<div id="register-page-info">
-				<input class="input_1" type="text" name="email" placeholder=" E-mail ">
-				<input class="input_2" type="password" name="password" placeholder=" 密碼 ">
-				<input class="input_3" type="password" name="retype_password" placeholder=" 確認密碼">
-				<input class="input_4" type="text" name="name" placeholder=" 使用者名稱 ">
-				<input class="input_5" type="text" name="mobileNum" placeholder=" 手機 ">
-				<input class="input_6" type="text" name="phone" placeholder=" 市話(選填) ">
-				<input type="hidden" name="sign_up" value="sign_up">
-			</div>	
-
-			<div id="register-page-new">
-				送出
+			<div id="register-page-tip">&nbsp;大家好我是米悲觀基羅<!--錯誤訊息提示區塊-->
 			</div>
-		</form>
+
+			<!--註冊表單-->
+			<form id="register_form" method="POST" action="sign_up.php">
+				<div id="register-page-info">
+					<input class="input_1" type="text" name="email" placeholder=" E-mail ">
+					<input class="input_2" type="password" name="password" placeholder=" 密碼 ">
+					<input class="input_3" type="password" name="retype_password" placeholder=" 確認密碼">
+					<input class="input_4" type="text" name="name" placeholder=" 使用者名稱 ">
+					<input class="input_5" type="text" name="mobileNum" placeholder=" 手機 ">
+					<input class="input_6" type="text" name="phone" placeholder=" 市話(選填) ">
+					<input type="hidden" name="sign_up" value="sign_up">
+				</div>	
+
+				<div id="register-page-new">
+					送出
+				</div>
+			</form><!--註冊表單結束-->
 
 
-		</div>
-	</div>
+		</div><!--內容區塊結束-->
+	</div><!--帳號註冊頁面區塊結束-->
 	
 
 
@@ -886,7 +915,93 @@ function fbLogout(){
 
 
 </script>
+<!--驗證表單的JS-->
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$("#register_form").validate({
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
+				element.next('.form_group').append(error);
+			},
+			rules: {
+				retype_password: {
+					equalTo : '#password'
+				}
+			}
+		});
+		
+		$("#login_form").validate({
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
+				element.next('.form_group').append(error);
+			}
+			
+		});
+	});
+</script>
+<script>
+	jQuery.extend(jQuery.validator.messages, {
+		required: "必填欄位.",
+		remote: "Please fix this field.",
+		email: "請輸入正確的 Email 信箱.",
+		url: "請輸入正確的網址.",
+		date: "請輸入正確的日期.",
+		dateISO: "請輸入正確的 (ISO) 日期格式.",
+		number: "本欄位請填入數字.",
+		digits: "本欄位請填入數字.",
+		creditcard: "請輸入正確的信用卡號.",
+		equalTo: "請再次輸入相同的值.",
+		maxlength: $.validator.format("至多輸入 {0} 個字."),
+		minlength: $.validator.format("至少輸入 {0} 個字."),
+		rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
+		range: $.validator.format("請輸入 {0} 到 {1} 的數字."),
+		max: $.validator.format("請輸入小於等於 {0} 的值."),
+		min: $.validator.format("請輸入大於等於 {0} 的值.")
+	});
+</script>
+<script>
+	jQuery.validator.addMethod("mobileTaiwan", function( value, element ) {
+		var str = value;
+		var result = false;
+		if(str.length > 0){
+			//是否只有數字;
+			var patt_mobile = /^[\d]{1,}$/;
+			result = patt_mobile.test(str);
 
+			if(result){
+				//檢查前兩個字是否為 09
+				//檢查前四個字是否為 8869
+				var firstTwo = str.substr(0,2);
+				var firstFour = str.substr(0,4);
+				var afterFour = str.substr(4,str.length-1);
+				if(firstFour == '8869'){
+					$(element).val('09'+afterFour);
+					if(afterFour.length == 8){
+						result = true;
+					} else {
+						result = false;
+					}
+				} else if(firstTwo == '09'){
+					if(str.length == 10){
+						result = true;
+					} else {
+						result = false;
+					}
+				} else {
+					result = false;
+				}
+			}
+		} else {
+			result = true;
+		}
+		return result;
+		}, "手機號碼不符合格式");
+</script>
 
 
 
