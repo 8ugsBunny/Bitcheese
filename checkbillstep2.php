@@ -149,7 +149,7 @@ if(isset($_SESSION['products'])){
 			<div class="check-bill-pic"><img src="product_images/{$product_code}/1.jpg"></div>
 			<div class="check-bill-title">{$product_name}</div>
 			<div class="check-bill-amount"><input class="spinner_for_checkbill_step_2" data-code="{$product_code}" 
-			data-price="{$product_price}" name="qty" value="{$product_qty}"></div>
+			data-price="{$product_price}" name="qty" value="{$product_qty}" readonly="readonly"></div>
 			<div class="check-bill-price">NT.{$price_for_items}</div>
 			<div class="clearfix"></div>
 		</div>
@@ -227,8 +227,9 @@ $(document).ready(function(){
 	//購物車數量增減按鈕
 	$( ".spinner_for_checkbill_step_2" ).spinner({
 		max: 99,
-		min: 1
-	});
+		min: 1,
+			
+		});
 
 
 	

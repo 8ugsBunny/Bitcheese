@@ -746,7 +746,9 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 
 #left-panel{
 			width:25%;
+
 			height:auto;
+
 			background-color:white;
 			z-index:1;
 			position:fixed;
@@ -761,13 +763,17 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 				font-size:15pt;
 				padding-top:5px;
 				padding-bottom:5px;
+
 				font-family:"Gotham";
+
 				background-color:#E8B7CC;
 }
 
 #category-title>span{font-family:"微軟正黑體","Microsoft JhengHei"; 
 font-size:10pt;
+
 font-family:"Gotham";}
+
 
 	
 #left-panel > ul{
@@ -776,6 +782,7 @@ font-family:"Gotham";}
 	color:#666666;
 	padding-left:0;
 	line-height: 30px;　
+
 
 }
 
@@ -806,7 +813,9 @@ font-family:"Gotham";}
 #left-shopping-cart{
 			text-align: center;
 			width:25%;
+
 			height:auto;
+
 			background-color:#E8B7CC;
 			z-index:1;
 			position:fixed;
@@ -820,7 +829,9 @@ font-family:"Gotham";}
 #shopping-cart-title{
 				font-size:15pt;
 				padding:5px;
+
 				font-family:"Gotham";
+
 				border-bottom:1px solid #b3b3b3;
 				text-align: left;
 
@@ -874,8 +885,6 @@ font-size:13pt;
 color:white;
 text-align:center;
 }
-
-
 
 .remove-item{color:#BD9F87;font-size:8pt;}
 
@@ -953,9 +962,7 @@ font-size:12pt;}
 
 
    
-#login-page-content{
-					text-align:center;/*使所有內容置中*/
-					width:100%;}
+#login-page-content{width:100%;}
 
 
 
@@ -964,6 +971,15 @@ font-size:12pt;}
 					/*設定logo大小 */
 					width:236px;
 					height:42px;
+					margin:0 auto;
+					display:block;
+}
+
+.login_error_tips{font-size:10pt;color:red;width:38%;}
+
+#login-page-info>form{width:80%;
+					margin:0 auto;
+					margin-left:150px;
 }
 
 #login-page-tip{margin-bottom:10px;margin-top:10px;font-size:10pt;color:red;}
@@ -972,41 +988,53 @@ font-size:12pt;}
 						display:block;
 						margin:0 auto;
 
+
 						width:50%;
+
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
+						display:inline-block;
+						margin-top:30px;
 }
 
 #login-page-info>form>.input_2{
 						display:block;
 						margin:0 auto;
 						margin-top:5px;
-						width:50%;
+						width:62%;
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
+						display:inline-block;
 }
 
-#log_in_with_facebook{width:250px;
+#log_in_with_facebook{
+width:300px;
 border:1px solid white;
 background-color: #4267B2;
 color:white;
 height:30px;
 vertical-align: middle;
 font-size:10pt;
-margin-top:30px;
+
 border-radius:3px;
+margin:0 auto;
+margin-top:30px;
+display: block;
+
 }
 
 #login-page-nav{
 				font-size:10pt;
 				margin-top:30px;
+				text-align: center;
 }
 
 #login-page-forget{
 					font-size:10pt;
 					margin-top:5px;
+					text-align: center;
 }
 
 
@@ -1018,6 +1046,7 @@ border-radius:3px;
 				margin-top:30px;
 				background-color: #b3b3b3;
 				color:white;
+				text-align: center;
 }
 
 
@@ -1065,6 +1094,7 @@ border-radius:3px;
  				margin-top:20px;
 				margin-bottom:25px;
 				background-color: #b3b3b3;
+				text-align: center;
 }
 
 
@@ -1074,7 +1104,7 @@ border-radius:3px;
 					height:42px;
 }
 
-#pw-back-page-info>.input_1{
+.required{
 						display:block;
 						margin:0 auto;
 						margin-top:5px;
@@ -1147,9 +1177,7 @@ border-radius:3px;
 
 
    
-#register-page-content{
-					text-align:center;/*使所有內容置中*/
-					width:100%;}
+#register-page-content{width:100%;}
 
 
 
@@ -1157,9 +1185,11 @@ border-radius:3px;
 					/*設定logo大小 */
 					width:236px;
 					height:42px;
+					display: block;
+					margin:0 auto;
 }
 
-#register-page-tip{
+.register_error_tips{
 					margin-top: 10px; 
 					margin-bottom: 10px;
 					color:red;
@@ -1167,60 +1197,78 @@ border-radius:3px;
 }
 
 
+
+#register-page-info{width:80%;
+					margin-left:100px;
+					margin-top:30px;}
+
+.register_error_tips{width:30%;color:red;font-size:10pt;}
+
 #register-page-info>.input_1{
-						display:block;
+						display:inline-block;
 						margin:0 auto;
-						width:50%;
+						width:70%;
+
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
 }
 
 #register-page-info>.input_2{
-						display:block;
+
+						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
-						width:50%;
+						width:70%;
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
 }
 
 #register-page-info>.input_3{
-						display:block;
+
+						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
-						width:50%;
+						width:70%;
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
 }
 
 #register-page-info>.input_4{
-						display:block;
+
+						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
-						width:50%;
+						width:70%;
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
 }
 
 #register-page-info>.input_5{
-						display:block;
+
+						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
-						width:50%;
+						width:70%;
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
 }
 
 #register-page-info>.input_6{
-						display:block;
+
+						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
-						width:50%;
+						width:70%;
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
@@ -1246,6 +1294,7 @@ border-radius:3px;
 				margin-top:30px;
 				background-color: #b3b3b3;
 				color:white;
+				text-align: center;
 }
 
 

@@ -67,6 +67,8 @@ include_once("utf8_header.php");
 	
 	<div id="left-panel"><!--左側鑲版-->
 
+
+
 		<div id="category-title" class="special-font">
 			&nbsp;Category&nbsp;
 		</div>
@@ -117,6 +119,7 @@ include_once("utf8_header.php");
 				<ul>
 					<li class="special-bg">
 					&nbsp;&nbsp;
+
 					<span class="left-panel-eng">NewArrival</span>
 					&nbsp;
 					<span>新品到貨</span>
@@ -232,13 +235,16 @@ include_once("utf8_header.php");
 					</span>
 				</button>
 
-				<div id="login-page-tip">&nbsp;哈囉!
-				</div><!--錯誤提示訊息-->
+
 
 				<!--輸入資訊表單-->
 				<form id="login_form" method="POST" action="log_in.php">
-					<input class="input_1" type="text" name="email_login" placeholder=" 輸入信箱 ">
-					<input class="input_2" type="password" name="password_login" placeholder=" 密碼 ">
+					<input class="input_1 required email" type="text" name="email_login" placeholder=" 輸入信箱 ">
+					<span class="login_error_tips"></span>
+					<br>
+					<input class="input_2 required" type="password" name="password_login" placeholder=" 密碼 ">
+					<span class="login_error_tips"></span>
+
 					<input type="hidden" name="log_in" value="log_in">
 				</form>
 				
@@ -252,7 +258,9 @@ include_once("utf8_header.php");
 		
 			
 			<div id="login-page-forget"><!--忘記密碼按鈕-->
-				忘記密碼
+
+			忘記密碼
+
 			</div>	
 			
 
@@ -287,7 +295,12 @@ include_once("utf8_header.php");
 			</div>
 		
 			<div id="pw-back-page-info"><!--信箱輸入區塊-->
-				<input class="input_1" type="text" name="email" placeholder=" 輸入信箱 ">
+
+				<form id="recieve_password_form" method="POST" action="recieve_password.php">
+					<input class="input_1 required email" type="text" name="email" placeholder=" 輸入信箱 ">
+					<input type="hidden" value="recieve_password">
+				</form>
+
 			</div>
 
 			<div id="pw-back-page-new"><!--取回密碼區塊-->
@@ -313,20 +326,32 @@ include_once("utf8_header.php");
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 
-			<div id="register-page-tip">&nbsp;大家好我是米悲觀基羅<!--錯誤訊息提示區塊-->
-			</div>
 
 			<!--註冊表單-->
 			<form id="register_form" method="POST" action="sign_up.php">
 				<div id="register-page-info">
-					<input class="input_1" type="text" name="email" placeholder=" E-mail ">
-					<input class="input_2" type="password" name="password" placeholder=" 密碼 ">
-					<input class="input_3" type="password" name="retype_password" placeholder=" 確認密碼">
-					<input class="input_4" type="text" name="name" placeholder=" 使用者名稱 ">
-					<input class="input_5" type="text" name="mobileNum" placeholder=" 手機 ">
-					<input class="input_6" type="text" name="phone" placeholder=" 市話(選填) ">
+					<input class="input_1 required email" type="text" name="email" placeholder=" E-mail ">
+					<span class="register_error_tips"></span>
+					<br>
+
+					<input class="input_2 required" id="password" type="password" name="password" placeholder=" 密碼 ">
+					<span class="register_error_tips"></span>
+					<br>
+
+					<input class="input_3 required" type="password" name="retype_password" placeholder=" 確認密碼">
+					<span class="register_error_tips"></span>
+					<br>
+
+					<input class="input_4 required" type="text" name="name" placeholder=" 使用者名稱 ">
+					<span class="register_error_tips"></span>
+					<br>
+
+					<input class="input_5 required mobileTaiwan" type="text" name="mobileNum" placeholder=" 手機 ">
+					<span class="register_error_tips">範例:0912456789</span>
+
 					<input type="hidden" name="sign_up" value="sign_up">
 				</div>	
+
 
 				<div id="register-page-new">
 					送出
@@ -633,11 +658,15 @@ echo($content);
 						limit = limit + interval;
 						console.log("start: " + start + ",limit: " + limit);
 						var $content = $(data);
-						$grid.append( $content ).masonry( 'appended', $content);
+
+
+						$grid.append( $content ).imagesLoaded(function(){
+							$grid.masonry('appended', $content);
+						});
+
 						$(window).data('ajaxready', true);
-						$grid.imagesLoaded().progress( function() {
-			  			$grid.masonry();
-			});
+
+
 					}).fail(function(jqXHR, textStatus, errorThrown){
 						console.log(jqXHR);
 					    console.log(textStatus);
@@ -766,6 +795,12 @@ echo($content);
 	$("#login-page-nav").click(function(e){
 		e.preventDefault();
 		$("#login_form").submit();
+	});
+
+	//取回密碼表單送出
+	$('#pw-back-page-new').click(function(e){
+		e.preventDefault();
+		$("#recieve_password_form").submit();
 	});
 
 	
@@ -920,25 +955,49 @@ function fbLogout(){
 	$(document).ready(function(){
 	
 		$("#register_form").validate({
+
+
+			errorContainer: ".register_error_tips",
+
 			submitHandler: function(form) {
 				form.submit();
 			},
 			errorPlacement: function(error, element) {
-				element.next('.form_group').append(error);
+
+
+				element.next('.register_error_tips').html(error);
+
 			},
 			rules: {
 				retype_password: {
 					equalTo : '#password'
 				}
 			}
+
 		});
 		
 		$("#login_form").validate({
+
+			errorContainer: ".login_error_tips",
+
 			submitHandler: function(form) {
 				form.submit();
 			},
 			errorPlacement: function(error, element) {
-				element.next('.form_group').append(error);
+				element.next("span.login_error_tips").html(error);
+			}
+			
+		});
+
+		$("#recieve_password_form").validate({
+
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
+
+				$("#pw-back-page-tip").html(error);
+
 			}
 			
 		});
@@ -946,16 +1005,20 @@ function fbLogout(){
 </script>
 <script>
 	jQuery.extend(jQuery.validator.messages, {
-		required: "必填欄位.",
+
+		required: "必填.",
 		remote: "Please fix this field.",
-		email: "請輸入正確的 Email 信箱.",
+		email: "錯誤的Email格式.",
+
 		url: "請輸入正確的網址.",
 		date: "請輸入正確的日期.",
 		dateISO: "請輸入正確的 (ISO) 日期格式.",
 		number: "本欄位請填入數字.",
 		digits: "本欄位請填入數字.",
 		creditcard: "請輸入正確的信用卡號.",
-		equalTo: "請再次輸入相同的值.",
+
+		equalTo: "請輸入相同密碼.",
+
 		maxlength: $.validator.format("至多輸入 {0} 個字."),
 		minlength: $.validator.format("至少輸入 {0} 個字."),
 		rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
@@ -1000,7 +1063,9 @@ function fbLogout(){
 			result = true;
 		}
 		return result;
-		}, "手機號碼不符合格式");
+
+		}, "錯誤的手機號碼格式");
+
 </script>
 
 

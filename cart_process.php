@@ -85,7 +85,7 @@ if(isset($_POST["load_cart"]) && $_POST["load_cart"]==1)
 								 		<div class="purchase-content-price">單價 NT.'.$product_price.'</div>
 								 
 									 	<div class="pruchase-content-amount">
-									 		<input class="spinner_for_sp_cart" data-code="'.$product_code.'" name="qty" value="'.$product_qty.'">
+									 		<input class="spinner_for_sp_cart" data-code="'.$product_code.'" name="qty" value="'.$product_qty.'" readonly="readonly">
 									 	</div>
 
 									 	<a href="#" class="remove-item" data-code="'.$product_code.'">&times;<span>移除商品<span></a>
