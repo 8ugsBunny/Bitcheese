@@ -19,4 +19,3 @@
 .uil-default-css { position: relative;background:none;width:200px;height:200px;}
 .uil-default-css > div:nth-of-type(8){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: 0.375s;animation-delay: 0.375s;}
 .uil-default-css { position: relative;background:none;width:200px;height:200px;}
-</style>

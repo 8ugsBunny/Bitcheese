@@ -2,6 +2,7 @@
 //引入標頭檔
 include_once("config.inc.php");
 include_once("utf8_header.php");
+include_once("start_session.php");
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +29,9 @@ include_once("utf8_header.php");
 	<link rel="stylesheet" href="css/Tablet.css" media="(min-width:768px) and (max-width:1024px)">  
 
 	<link rel="stylesheet" href="css/MobileDevice.css" media="(max-width:767px)">
+
+	<link rel="stylesheet" href="css/spin.css" media="(max-width:767px)">
+	
 	
 	
 	<!--javascript-->
@@ -36,6 +40,7 @@ include_once("utf8_header.php");
 	<script type="text/javascript" src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 	
 </head>
 
@@ -442,7 +447,7 @@ include_once("utf8_header.php");
 				</li>
 				
                 <?php 
-                	if(isset($_COOKIE['user_id'])) {
+                	if(isset($_SESSION['user_id'])) {
                 		$content = <<<EOT
                 		<li id="membercenter">
 							<i class="fa fa-bookmark" aria-hidden="true"></i>   
@@ -605,7 +610,32 @@ echo($content);
 				
 			
 		</div><!--masonry div結束-->
+
+				<div class='uil-default-css' id="hahaha" style='transform:scale(0.2);'>
 				
+				<div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;'>
+					
+				</div>
+				
+				<div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;'>
+					</div>
+				<div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;'>	
+				</div>
+				
+				<div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;'>
+				</div>
+
+				<div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;'>
+				</div>
+
+				<div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;'>
+				</div>
+				
+				<div style='top:80px;left:93px;width:14px;height:40px;background:#b3b3b3;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;'>
+				</div>
+
+				</div>
+
 </div> <!--container結束-->
 
 <!--  class="fb-like"
@@ -657,9 +687,8 @@ echo($content);
 						start = start + interval;
 						limit = limit + interval;
 						console.log("start: " + start + ",limit: " + limit);
+
 						var $content = $(data);
-
-
 						$grid.append( $content ).imagesLoaded(function(){
 							$grid.masonry('appended', $content);
 						});
@@ -676,11 +705,11 @@ echo($content);
 			});
 			
 			//grid-item上背景色
-			for(var i=0; i<$(".grid-item").length; i++){
+			/*for(var i=0; i<$(".grid-item").length; i++){
 				var color_num = 3;//顏色種類
 				var index = i%color_num;
 				$(".shopping-cart").eq(i).addClass("grid-item-color-"+index);
-			}
+			}*/
 			
 			//登入/註冊頁面跳出
 			$("#sign-in").click(function(){
@@ -984,7 +1013,7 @@ function fbLogout(){
 				form.submit();
 			},
 			errorPlacement: function(error, element) {
-				element.next("span.login_error_tips").html(error);
+				element.next(".login_error_tips").html(error);
 			}
 			
 		});
