@@ -2,7 +2,6 @@
 //引入標頭檔
 include_once("config.inc.php");
 include_once("utf8_header.php");
-include_once("start_session.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +14,7 @@ include_once("start_session.php");
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!--0219-->
+	 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!--0219-->
 
 	<link rel="stylesheet" 
 	 href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,8 +28,6 @@ include_once("start_session.php");
 	<link rel="stylesheet" href="css/Tablet.css" media="(min-width:768px) and (max-width:1024px)">  
 
 	<link rel="stylesheet" href="css/MobileDevice.css" media="(max-width:767px)">
-
-	<link rel="stylesheet" href="css/spin.css">
 	
 	
 	<!--javascript-->
@@ -49,14 +46,121 @@ include_once("start_session.php");
 
 	
 	<div id="left-panel"><!--左側鑲版-->
-		<div id="category-title" class="special-font">&nbsp;&nbsp;<i class="fa fa-bars" aria-hidden="true"></i>&nbsp;商品分類</div>
+		<div id="category-title" class="special-font">
+			&nbsp;Category&nbsp;
+		</div>
 				<ul>
-					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 頭飾</li>
-					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 髮飾</li>
-					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 頸飾</li>
-					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 手鐲</li>
-					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 腳飾</li>
-					<li>&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp; 其他小物</li>
+					<li class="special-bg">
+					&nbsp;&nbsp;
+					<span class="left-panel-eng">Series</span>
+					&nbsp;
+					<span>系列精選</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>脖子系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Neck Series</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>手鍊系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Bracelets</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>髮圈系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Scrunchs</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>髮夾系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Snap Clip</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>腳鍊系列</span>
+					&nbsp;
+					<span class="left-panel-eng">Strap Series</span>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="special-bg">
+					&nbsp;&nbsp;
+					<span class="left-panel-eng">NewArrival</span>
+					&nbsp;
+					<span>新品到貨</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>幾何優雅-個性手鍊</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>幾何優雅-個性頸鍊</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>爵士藍調-髮箍</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>少女情懷-髮箍</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>精緻典雅-耳環</span>
+					</li>
+				</ul> 
+
+				<ul>
+					<li class="special-bg">
+					&nbsp;&nbsp;
+					<span class="left-panel-eng">Bonus</span>
+					&nbsp;
+					<span>活動特惠商品</span>
+					</li>
+					
+				
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>49起 &nbsp;單品特惠</span>
+					</li>
+
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>149起 耳環特惠</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>299起 髮箍特惠</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>買一送一系列</span>
+					</li>
+
+					<li class="special-item">
+					&nbsp;&nbsp;&nbsp;
+					<span>任選一樣 包裹免運</span>
+					</li>
 				</ul> 
 	</div>
 
@@ -64,7 +168,7 @@ include_once("start_session.php");
 	
 	
 	<div id="left-shopping-cart"><!--左側鑲版-->
-		<div id="shopping-cart-title" class="special-font"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;購物車</div>
+		<div id="shopping-cart-title" class="special-font">&nbsp;ShoppingCart</div>
 				
 			<div id="for_scroll">
 					
@@ -74,7 +178,7 @@ include_once("start_session.php");
 				
 				
 		
-				<div id="purchase-button">結帳</div>
+				<div id="purchase-button"><i class="fa fa-usd" aria-hidden="true"></i>&nbsp;結帳</div>
 	</div>
 		
 	
@@ -83,155 +187,148 @@ include_once("start_session.php");
 	<div class="login-background-color"></div><!--登入頁面背景顏色div-->
 	
 	
-	
-	<div id="login-page"><!--login-page-->
+	<!--登入頁面-->
+	<div id="login-page">
 
-		<div id="login-page-content">
+		<div id="login-page-content"><!--登入頁面大區塊開始-->
 
-		 <div class="cancel_button">
-			<i class="fa fa-times" aria-hidden="true" id="log-in-cancel"></i>
-		</div>
+			<div class="cancel_button"><!--取消按鈕-->
+				<i class="fa fa-times" aria-hidden="true" id="log-in-cancel"></i>
+			</div>
 
 			
-			<div id="login-page-logo">
+			<div id="login-page-logo"><!--Logo-->
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 
 		
-			<div id="login-page-info">
+			<div id="login-page-info"><!--輸入登入資料區塊開始-->
 	
-				<button type="botton" id="log_in_with_facebook">
+				<button type="botton" id="log_in_with_facebook"><!--以FB登入-->
 					<span>
 						<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
 						使用Facebook登入
 					</span>
 				</button>
 
-				<div id="status">
-				</div>
 
-				
-					<form id="login_form" method="POST" action="log_in.php">
-						
-							<input class="input_1 required email" type="text" name="email_login" placeholder=" 輸入信箱 ">
-							<span class="form_group"></span>
-						
-						
-							<input class="input_2 required" type="password" name="password_login" placeholder=" 密碼 "><span class="form_group"></span>
-					
-							<input type="hidden" name="log_in" value="log_in">
-					</form>
+				<!--輸入資訊表單-->
+				<form id="login_form" method="POST" action="log_in.php">
+					<input class="input_1 required email" type="text" name="email_login" placeholder=" 輸入信箱 ">
+					<span class="login_error_tips"></span>
+					<br>
+					<input class="input_2 required" type="password" name="password_login" placeholder=" 密碼 ">
+					<span class="login_error_tips"></span>
+					<input type="hidden" name="log_in" value="log_in">
+				</form>
 				
 
+			</div><!--輸入登入資料區塊結束-->
+				
+			
+			<div id="login-page-nav"><!--登入按鈕-->
+				登入
 			</div>
-				
-				<div id="login-page-nav">
-					登入
-				</div>
 		
 			
-		
-			<div id="login-page-forget">
-				忘記密碼
+			<div id="login-page-forget"><!--忘記密碼按鈕-->
+			忘記密碼
 			</div>	
 			
 
-			<div id="login-page-new">
+			<div id="login-page-new"><!--註冊新帳號按鈕-->
 				註冊新帳號
 			</div>
 
 
-		</div>
-	</div>
+		</div><!--登入頁面大區塊結束-->
 
-	<!-- 取回密碼 -->
+	</div><!--登入頁面結束-->
 
-	<div id="pw-back-page"><!--pw-back-->
 
-		<div id="pw-back-page-content">
 
-		 <div class="cancel_button">
-			<i class="fa fa-times" aria-hidden="true" id="pw-back-cancel"></i>
-		</div>
+	<!--取回密碼頁面-->
+
+	<div id="pw-back-page"><!--取回密碼頁面大區塊開始-->
+
+		<div id="pw-back-page-content"><!--內容大區塊開始-->
+
+			<div class="cancel_button"><!--取消按鈕區塊-->
+				<i class="fa fa-times" aria-hidden="true" id="pw-back-cancel"></i>
+			</div>
 
 			
-			<div id="pw-back-page-logo">
+			<div id="pw-back-page-logo"><!--Logo區塊-->
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 
-			<div id="pw-back-page-tip">
+			<div id="pw-back-page-tip"><!--提示訊息區塊-->
 				請輸入您註冊所使用的信箱
 			</div>
 		
-			<div id="pw-back-page-info">
-				<input class="input_1" type="text" name="email" placeholder=" 輸入信箱 ">
+			<div id="pw-back-page-info"><!--信箱輸入區塊-->
+				<form id="recieve_password_form" method="POST" action="recieve_password.php">
+					<input class="input_1 required email" type="text" name="email" placeholder=" 輸入信箱 ">
+					<input type="hidden" value="recieve_password">
+				</form>
 			</div>
 
-			<div id="pw-back-page-new">
+			<div id="pw-back-page-new"><!--取回密碼區塊-->
 				取回密碼
 			</div>
 
 
-		</div>
-	</div>
+		</div><!--內容大區塊結束-->
+	</div><!--取回密碼頁面大區塊結束-->
 
-	<!-- 帳號註冊 -->
 
-	<div id="register-page"><!--register-->
+	<!--帳號註冊頁面-->
 
-		<div id="register-page-content">
+	<div id="register-page"><!--帳號註冊頁面區塊開始-->
 
-		 <div class="cancel_button">
-			<i class="fa fa-times" aria-hidden="true" id="register-cancel"></i>
-		</div>
+		<div id="register-page-content"><!--內容區塊開始-->
 
-			
-			<div id="register-page-logo">
+			<div class="cancel_button"><!--取消按鈕區塊-->
+				<i class="fa fa-times" aria-hidden="true" id="register-cancel"></i>
+			</div>
+
+			<div id="register-page-logo"><!--Logo區塊-->
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 
-		<form id="register_form" method="POST" action="sign_up.php">
-			<div id="register-page-info">
-				
+			<!--註冊表單-->
+			<form id="register_form" method="POST" action="sign_up.php">
+				<div id="register-page-info">
+					<input class="input_1 required email" type="text" name="email" placeholder=" E-mail ">
+					<span class="register_error_tips"></span>
+					<br>
 
-					
-						<input class="input_1 required email" type="text" name="email" placeholder=" E-mail "><span class="form_group"></span>
-				
+					<input class="input_2 required" id="password" type="password" name="password" placeholder=" 密碼 ">
+					<span class="register_error_tips"></span>
+					<br>
 
-					
-						<input class="input_2 required" type="password" name="password" id="password" placeholder=" 密碼 "><span class="form_group"></span>
-				
+					<input class="input_3 required" type="password" name="retype_password" placeholder=" 確認密碼">
+					<span class="register_error_tips"></span>
+					<br>
 
-					
-						<input class="input_3 required" type="password" name="retype_password" placeholder="確認密碼"><span class="form_group"></span>
-					
+					<input class="input_4 required" type="text" name="name" placeholder=" 使用者名稱 ">
+					<span class="register_error_tips"></span>
+					<br>
 
-					
-						<input class="input_4 required" type="text" name="name" placeholder=" 使用者名稱 "><span class="form_group"></span>
-					
+					<input class="input_5 required mobileTaiwan" type="text" name="mobileNum" placeholder=" 手機 ">
+					<span class="register_error_tips">範例:0912456789</span>
 
-					
-						<input class="input_5 required mobileTaiwan" type="text" name="mobileNum" placeholder=" 手機 "><span class="form_group"></span>
-					
+					<input type="hidden" name="sign_up" value="sign_up">
+				</div>	
 
-					
-						<input class="input_6" type="text" name="phone" placeholder=" 市話(選填) "><span class="form_group"></span>
-					
-
-						<input type="hidden" name="sign_up" value="sign_up">
-
-				
-			</div>	
-
-			<div id="register-page-new">
-				送出
-			</div>
-
-		</form>
+				<div id="register-page-new">
+					送出
+				</div>
+			</form><!--註冊表單結束-->
 
 
-		</div>
-	</div>
+		</div><!--內容區塊結束-->
+	</div><!--帳號註冊頁面區塊結束-->
 	
 
 
@@ -313,7 +410,7 @@ include_once("start_session.php");
 				</li>
 				
                 <?php 
-                	if(isset($_SESSION['user_id'])) {
+                	if(isset($_COOKIE['user_id'])) {
                 		$content = <<<EOT
                 		<li id="membercenter">
 							<i class="fa fa-bookmark" aria-hidden="true"></i>   
@@ -399,9 +496,8 @@ EOT;
 				<?php
 					$qry = "Select * FROM bitcheese_products LIMIT 15";//第一次載入15個商品
 					$result = $mysqli_conn->query($qry);
-					$content = "";
 					while($row = $result->fetch(PDO::FETCH_ASSOC)){
-						$content .= <<<EOT
+						$content = <<<EOT
 							<div class="grid-item">
 
 								<a href="productinfo.html">
@@ -468,35 +564,16 @@ EOT;
 			
 
 EOT;
-
+echo($content);
 
 					}
-				echo($content);
+
 				?>
 
 				
 			
 		</div><!--masonry div結束-->
-<!--loader-->
-<div id="loader" class='uil-default-css' style='transform:scale(0.2);'>
-<div style='top:80px;left:92px;width:16px;height:40px;background:#b3b3b3;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
-
-<div style='top:80px;left:92px;width:16px;height:40px;background:#b3b3b3;-webkit-transform:rotate(45deg) translate(0,-60px);transform:rotate(45deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
-
-<div style='top:80px;left:92px;width:16px;height:40px;background:#b3b3b3;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
-
-<div style='top:80px;left:92px;width:16px;height:40px;background:#b3b3b3;-webkit-transform:rotate(135deg) translate(0,-60px);transform:rotate(135deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
-
-<div style='top:80px;left:92px;width:16px;height:40px;background:#b3b3b3;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
-
-<div style='top:80px;left:92px;width:16px;height:40px;background:#b3b3b3;-webkit-transform:rotate(225deg) translate(0,-60px);transform:rotate(225deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
-
-<div style='top:80px;left:92px;width:16px;height:40px;background:#b3b3b3;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
-
-<div style='top:80px;left:92px;width:16px;height:40px;background:#b3b3b3;-webkit-transform:rotate(315deg) translate(0,-60px);transform:rotate(315deg) translate(0,-60px);border-radius:10px;position:absolute;'></div>
-
-</div>
-
+				
 </div> <!--container結束-->
 
 <!--  class="fb-like"
@@ -511,7 +588,7 @@ EOT;
 
 
 			//購物車數量增減按鈕
-			//$( ".spinner_for_sp_cart" ).spinner();
+			$( ".spinner_for_sp_cart" ).spinner();
 		
 			//masonry-percentage-version
 			var $grid = $('.grid').masonry({
@@ -530,40 +607,38 @@ EOT;
 			var start = 15;//下限
 			var limit = 30;//上限
 			var interval = 15;//一次取的商品數量
-			$(window).data('ajaxready', true).scroll(function(e) {
-	    		if ($(window).data('ajaxready') == false) return;
+		$(window).data('ajaxready', true).scroll(function(e) {
+    		if ($(window).data('ajaxready') == false) return;
 
-			
-					if(Math.ceil($(window).scrollTop() + 1) >= ($(document).height() - $(window).height()) ){
-						$('#loader').show();
-						$(window).data('ajaxready', false);
-						$.ajax({
-								url: "infinite_scroll.php", 
-								type: "POST",
-								data: {start: start,
-									   limit: limit
-									  }
-						}).done(function(data){
-							//console.log(data);
-							start = start + interval;
-							limit = limit + interval;
-							//console.log("start: " + start + ",limit: " + limit);
-							var $content = $(data);
-							$grid.append( $content ).imagesLoaded(function(){
+		
+				if($(window).scrollTop() >= $(document).height() - $(window).height() - 100){
+					//$('#loader').show();
+					$(window).data('ajaxready', false);
+					$.ajax({
+							url: "infinite_scroll.php", 
+							type: "POST",
+							data: {start: start,
+								   limit: limit
+								  }
+					}).done(function(data){
+						console.log(data);
+						start = start + interval;
+						limit = limit + interval;
+						console.log("start: " + start + ",limit: " + limit);
+						var $content = $(data);
+
+						$grid.append( $content ).imagesLoaded(function(){
 							$grid.masonry('appended', $content);
 						});
-							$(window).data('ajaxready', true);
-							$("#loader").hide();
-						}).fail(function(jqXHR, textStatus, errorThrown){
-							console.log(jqXHR);
-						    console.log(textStatus);
-				    		console.log(errorThrown);
-						});
-						/*$grid.imagesLoaded(function(){
-							$grid.masonry();
-						});*/
-						
-					}
+
+						$(window).data('ajaxready', true);
+
+					}).fail(function(jqXHR, textStatus, errorThrown){
+						console.log(jqXHR);
+					    console.log(textStatus);
+			    		console.log(errorThrown);
+					});	
+				}
 			});
 			
 			//grid-item上背景色
@@ -652,7 +727,7 @@ EOT;
 	$("#purchase-details").on('click', 'a.remove-item', function(e) {
 		e.preventDefault(); 
 		var pcode = $(this).attr("data-code"); //get product code
-		$(this).parent().fadeOut(); //remove item element from box
+		$(this).parents(".for_the_border").fadeOut(); //remove item element from box
 		$.get( "cart_process.php", {"remove_code":pcode} , function(data){ //get Item count from Server
 			//$("#cart-info").html(data.items); //update Item count in cart-info
 			//$("#trigger-shopping-cart").trigger( "click" ); //trigger click on cart-box to update the items list
@@ -686,6 +761,12 @@ EOT;
 	$("#login-page-nav").click(function(e){
 		e.preventDefault();
 		$("#login_form").submit();
+	});
+
+	//取回密碼表單送出
+	$('#pw-back-page-new').click(function(e){
+		e.preventDefault();
+		$("#recieve_password_form").submit();
 	});
 
 	
@@ -757,7 +838,7 @@ function fbLogout(){
 	  FB.getLoginStatus(function(response) {//載入頁面時，檢查FB登入狀況
 	  										//如果FB登入中，用cookie設定session
 	    console.log(response);
-	   /*if (response.status === 'connected') {
+	    if (response.status === 'connected') {
 	    	$.ajax({
    			url: "start_session.php",
    			type: "POST",
@@ -768,7 +849,7 @@ function fbLogout(){
 		    console.log(textStatus);
     		console.log(errorThrown);
 	    });
-	    }*/
+	    }
 	  });
 
   };
@@ -835,95 +916,110 @@ function fbLogout(){
 
 
 </script>
+<!--驗證表單的JS-->
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$("#register_form").validate({
 
-		<!--驗證表單的JS-->
-	<script type="text/javascript">
-		$(document).ready(function(){
+			errorContainer: ".register_error_tips",
 		
-			$("#register_form").validate({
-				submitHandler: function(form) {
-					form.submit();
-				},
-				errorPlacement: function(error, element) {
-					element.next('.form_group').append(error);
-				},
-				rules: {
-					retype_password: {
-						equalTo : '#password'
-					}
-				}
-			});
-			
-			$("#login_form").validate({
-				submitHandler: function(form) {
-					form.submit();
-				},
-				errorPlacement: function(error, element) {
-					element.next('.form_group').append(error);
-				}
-				
-			});
-		});
-	</script>
-	<script>
-		jQuery.extend(jQuery.validator.messages, {
-			required: "必填欄位.",
-			remote: "Please fix this field.",
-			email: "請輸入正確的 Email 信箱.",
-			url: "請輸入正確的網址.",
-			date: "請輸入正確的日期.",
-			dateISO: "請輸入正確的 (ISO) 日期格式.",
-			number: "本欄位請填入數字.",
-			digits: "本欄位請填入數字.",
-			creditcard: "請輸入正確的信用卡號.",
-			equalTo: "請再次輸入相同的值.",
-			maxlength: $.validator.format("至多輸入 {0} 個字."),
-			minlength: $.validator.format("至少輸入 {0} 個字."),
-			rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
-			range: $.validator.format("請輸入 {0} 到 {1} 的數字."),
-			max: $.validator.format("請輸入小於等於 {0} 的值."),
-			min: $.validator.format("請輸入大於等於 {0} 的值.")
-		});
-	</script>
-	<script>
-		jQuery.validator.addMethod("mobileTaiwan", function( value, element ) {
-	var str = value;
-	var result = false;
-	if(str.length > 0){
-		//是否只有數字;
-		var patt_mobile = /^[\d]{1,}$/;
-		result = patt_mobile.test(str);
- 
-		if(result){
-			//檢查前兩個字是否為 09
-			//檢查前四個字是否為 8869
-			var firstTwo = str.substr(0,2);
-			var firstFour = str.substr(0,4);
-			var afterFour = str.substr(4,str.length-1);
-			if(firstFour == '8869'){
-				$(element).val('09'+afterFour);
-				if(afterFour.length == 8){
-					result = true;
-				} else {
-					result = false;
-				}
-			} else if(firstTwo == '09'){
-				if(str.length == 10){
-					result = true;
-				} else {
-					result = false;
-				}
-			} else {
-				result = false;
-			}
-		}
-	} else {
-		result = true;
-	}
-	return result;
-}, "手機號碼不符合格式");
-	</script>
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
 
+				element.next('.register_error_tips').html(error);
+			},
+			rules: {
+				retype_password: {
+					equalTo : '#password'
+				}
+			}
+		});
+		
+		$("#login_form").validate({
+
+			errorContainer: ".login_error_tips",
+
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
+				element.next("span.login_error_tips").html(error);
+			}
+			
+		});
+
+		$("#recieve_password_form").validate({
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
+				$("#pw-back-page-tip").html(error);
+			}
+			
+		});
+	});
+</script>
+<script>
+	jQuery.extend(jQuery.validator.messages, {
+		required: "必填.",
+		remote: "Please fix this field.",
+		email: "錯誤的Email格式.",
+		url: "請輸入正確的網址.",
+		date: "請輸入正確的日期.",
+		dateISO: "請輸入正確的 (ISO) 日期格式.",
+		number: "本欄位請填入數字.",
+		digits: "本欄位請填入數字.",
+		creditcard: "請輸入正確的信用卡號.",
+		equalTo: "請輸入相同密碼.",
+		maxlength: $.validator.format("至多輸入 {0} 個字."),
+		minlength: $.validator.format("至少輸入 {0} 個字."),
+		rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
+		range: $.validator.format("請輸入 {0} 到 {1} 的數字."),
+		max: $.validator.format("請輸入小於等於 {0} 的值."),
+		min: $.validator.format("請輸入大於等於 {0} 的值.")
+	});
+</script>
+<script>
+	jQuery.validator.addMethod("mobileTaiwan", function( value, element ) {
+		var str = value;
+		var result = false;
+		if(str.length > 0){
+			//是否只有數字;
+			var patt_mobile = /^[\d]{1,}$/;
+			result = patt_mobile.test(str);
+
+			if(result){
+				//檢查前兩個字是否為 09
+				//檢查前四個字是否為 8869
+				var firstTwo = str.substr(0,2);
+				var firstFour = str.substr(0,4);
+				var afterFour = str.substr(4,str.length-1);
+				if(firstFour == '8869'){
+					$(element).val('09'+afterFour);
+					if(afterFour.length == 8){
+						result = true;
+					} else {
+						result = false;
+					}
+				} else if(firstTwo == '09'){
+					if(str.length == 10){
+						result = true;
+					} else {
+						result = false;
+					}
+				} else {
+					result = false;
+				}
+			}
+		} else {
+			result = true;
+		}
+		return result;
+		}, "錯誤的手機號碼格式");
+</script>
 
 
 
