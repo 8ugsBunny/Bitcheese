@@ -416,6 +416,13 @@ box-sizing:border-box;
 				src: url("../fonts/SignPainter-HouseScript.ttf");
 }
 
+@font-face{     
+				/*引用字體*/
+				font-family:Gotham;
+				src: url("../fonts/GothamXLight.woff");
+				src: url("../fonts/GothamXLight.ttf");
+}
+
 
 
 
@@ -483,6 +490,46 @@ box-sizing:border-box;
 }
 
 
+/*右下方按鈕大區塊*/
+#aside_button{
+	position: fixed;
+	right:50px;
+	bottom:10px;
+}
+
+/*右下方按鈕-優惠商品*/
+#Bonus_show{background-color:#99ccff;
+			width:50px;
+			height:50px;
+			border-radius:25px;
+			color:white;
+			text-align: center;
+			padding-top:5px;
+			margin-bottom:5px;}
+
+
+/*右下方按鈕-線上客服*/
+#custom_service{background-color:#F5F0EC;
+			width:50px;
+			height:50px;
+			border-radius:25px;
+			color:#b3b3b3;
+			text-align: center;
+			padding-top:5px;
+			margin-bottom:5px;}
+
+
+/*右下方按鈕-回到上方*/
+#back_to_top{background-color:#E8B7CC;
+			width:50px;
+			height:50px;
+			border-radius:25px;
+			color:white;
+			text-align: center;
+			padding-top:8px;
+			font-size:15pt;}
+
+
 header{
 		/*先前有設定過container,整體網頁置中*/
 		/*設定寬度為container的100%*/
@@ -523,7 +570,8 @@ header{
 #tag li{
 			/*設定tag底下li的樣式*/			
 			font-size:10pt;
-			color:#b3b3b3;
+			color:black;
+			font-weight: bold;
 			/*設定標籤內的文字 距離框線的距離*/
 			padding:2px;
 			/*設定標籤的外框線 且下框線由hr取代*/
@@ -539,7 +587,7 @@ header{
 			margin:0 auto;
 			/*使標籤和logo分開些許距離*/
 			margin-top:20px;
-			font-family:"century gothic";
+			font-family:"Gotham";
 			letter-spacing:1px;
 		
 }
@@ -698,7 +746,9 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 
 #left-panel{
 			width:25%;
-			height:100%;
+
+			height:auto;
+
 			background-color:white;
 			z-index:1;
 			position:fixed;
@@ -713,13 +763,17 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 				font-size:15pt;
 				padding-top:5px;
 				padding-bottom:5px;
-				font-family:"Gotham Light";
+
+				font-family:"Gotham";
+
 				background-color:#E8B7CC;
 }
 
 #category-title>span{font-family:"微軟正黑體","Microsoft JhengHei"; 
 font-size:10pt;
-font-family:"Gotham Light";}
+
+font-family:"Gotham";}
+
 
 	
 #left-panel > ul{
@@ -729,10 +783,11 @@ font-family:"Gotham Light";}
 	padding-left:0;
 	line-height: 30px;　
 
+
 }
 
 #left-panel .left-panel-eng{
-				font-family:"Gotham Light";
+				font-family:"Gotham";
 				font-size:10pt;
 
 }
@@ -758,7 +813,9 @@ font-family:"Gotham Light";}
 #left-shopping-cart{
 			text-align: center;
 			width:25%;
-			height:100%;
+
+			height:auto;
+
 			background-color:#E8B7CC;
 			z-index:1;
 			position:fixed;
@@ -772,7 +829,9 @@ font-family:"Gotham Light";}
 #shopping-cart-title{
 				font-size:15pt;
 				padding:5px;
-				font-family:"Gotham light";
+
+				font-family:"Gotham";
+
 				border-bottom:1px solid #b3b3b3;
 				text-align: left;
 
@@ -793,7 +852,7 @@ font-family:"Gotham Light";}
 #for_scroll{
 		overflow:scroll;
 		overflow-x:hidden;
-		height:80%;
+		height:600px;
 		background-color: #fff;
 }
 
@@ -826,8 +885,6 @@ font-size:13pt;
 color:white;
 text-align:center;
 }
-
-
 
 .remove-item{color:#BD9F87;font-size:8pt;}
 
@@ -925,10 +982,15 @@ font-size:12pt;}
 					margin-left:150px;
 }
 
+#login-page-tip{margin-bottom:10px;margin-top:10px;font-size:10pt;color:red;}
+
 #login-page-info>form>.input_1{
 						display:block;
 						margin:0 auto;
-						width:62%;
+
+
+						width:50%;
+
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
@@ -1135,6 +1197,7 @@ display: block;
 }
 
 
+
 #register-page-info{width:80%;
 					margin-left:100px;
 					margin-top:30px;}
@@ -1145,13 +1208,16 @@ display: block;
 						display:inline-block;
 						margin:0 auto;
 						width:70%;
+
 						height:30px;
 						border-radius:2px;
 						border:1px solid #EEE;
 }
 
 #register-page-info>.input_2{
+
 						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
 						width:70%;
@@ -1161,7 +1227,9 @@ display: block;
 }
 
 #register-page-info>.input_3{
+
 						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
 						width:70%;
@@ -1171,7 +1239,9 @@ display: block;
 }
 
 #register-page-info>.input_4{
+
 						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
 						width:70%;
@@ -1181,7 +1251,9 @@ display: block;
 }
 
 #register-page-info>.input_5{
+
 						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
 						width:70%;
@@ -1191,7 +1263,9 @@ display: block;
 }
 
 #register-page-info>.input_6{
+
 						display:inline-block;
+
 						margin:0 auto;
 						margin-top:5px;
 						width:70%;

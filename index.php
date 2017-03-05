@@ -36,16 +36,39 @@ include_once("utf8_header.php");
 	<script type="text/javascript" src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script><!--validate plug in-->
 	
 </head>
 
 
 <body id="eliminate-other-css">
-	
+
+	<div id="aside_button"><!--右下方按鈕區塊開始-->
+
+		<div id="Bonus_show"><!--優惠活動提示按鈕-->
+			優惠<br>
+			商品
+		</div>
+
+		<div id="custom_service"><!--線上客服按鈕-->
+			線上<br>
+			客服
+		</div>
+		
+		<div id="back_to_top"><!--回到上方按鈕-->
+			<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		</div>
+
+	</div><!--右下方按鈕區塊結束-->
+
+
+
+
 
 	
 	<div id="left-panel"><!--左側鑲版-->
+
+
+
 		<div id="category-title" class="special-font">
 			&nbsp;Category&nbsp;
 		</div>
@@ -96,6 +119,7 @@ include_once("utf8_header.php");
 				<ul>
 					<li class="special-bg">
 					&nbsp;&nbsp;
+
 					<span class="left-panel-eng">NewArrival</span>
 					&nbsp;
 					<span>新品到貨</span>
@@ -212,6 +236,7 @@ include_once("utf8_header.php");
 				</button>
 
 
+
 				<!--輸入資訊表單-->
 				<form id="login_form" method="POST" action="log_in.php">
 					<input class="input_1 required email" type="text" name="email_login" placeholder=" 輸入信箱 ">
@@ -219,6 +244,7 @@ include_once("utf8_header.php");
 					<br>
 					<input class="input_2 required" type="password" name="password_login" placeholder=" 密碼 ">
 					<span class="login_error_tips"></span>
+
 					<input type="hidden" name="log_in" value="log_in">
 				</form>
 				
@@ -232,7 +258,9 @@ include_once("utf8_header.php");
 		
 			
 			<div id="login-page-forget"><!--忘記密碼按鈕-->
+
 			忘記密碼
+
 			</div>	
 			
 
@@ -267,10 +295,12 @@ include_once("utf8_header.php");
 			</div>
 		
 			<div id="pw-back-page-info"><!--信箱輸入區塊-->
+
 				<form id="recieve_password_form" method="POST" action="recieve_password.php">
 					<input class="input_1 required email" type="text" name="email" placeholder=" 輸入信箱 ">
 					<input type="hidden" value="recieve_password">
 				</form>
+
 			</div>
 
 			<div id="pw-back-page-new"><!--取回密碼區塊-->
@@ -296,6 +326,7 @@ include_once("utf8_header.php");
 				<img src="images/logo_name.png" alt="Bitcheese飾品">
 			</div>
 
+
 			<!--註冊表單-->
 			<form id="register_form" method="POST" action="sign_up.php">
 				<div id="register-page-info">
@@ -320,6 +351,7 @@ include_once("utf8_header.php");
 
 					<input type="hidden" name="sign_up" value="sign_up">
 				</div>	
+
 
 				<div id="register-page-new">
 					送出
@@ -627,11 +659,13 @@ echo($content);
 						console.log("start: " + start + ",limit: " + limit);
 						var $content = $(data);
 
+
 						$grid.append( $content ).imagesLoaded(function(){
 							$grid.masonry('appended', $content);
 						});
 
 						$(window).data('ajaxready', true);
+
 
 					}).fail(function(jqXHR, textStatus, errorThrown){
 						console.log(jqXHR);
@@ -922,20 +956,24 @@ function fbLogout(){
 	
 		$("#register_form").validate({
 
+
 			errorContainer: ".register_error_tips",
-		
+
 			submitHandler: function(form) {
 				form.submit();
 			},
 			errorPlacement: function(error, element) {
 
+
 				element.next('.register_error_tips').html(error);
+
 			},
 			rules: {
 				retype_password: {
 					equalTo : '#password'
 				}
 			}
+
 		});
 		
 		$("#login_form").validate({
@@ -952,11 +990,14 @@ function fbLogout(){
 		});
 
 		$("#recieve_password_form").validate({
+
 			submitHandler: function(form) {
 				form.submit();
 			},
 			errorPlacement: function(error, element) {
+
 				$("#pw-back-page-tip").html(error);
+
 			}
 			
 		});
@@ -964,16 +1005,20 @@ function fbLogout(){
 </script>
 <script>
 	jQuery.extend(jQuery.validator.messages, {
+
 		required: "必填.",
 		remote: "Please fix this field.",
 		email: "錯誤的Email格式.",
+
 		url: "請輸入正確的網址.",
 		date: "請輸入正確的日期.",
 		dateISO: "請輸入正確的 (ISO) 日期格式.",
 		number: "本欄位請填入數字.",
 		digits: "本欄位請填入數字.",
 		creditcard: "請輸入正確的信用卡號.",
+
 		equalTo: "請輸入相同密碼.",
+
 		maxlength: $.validator.format("至多輸入 {0} 個字."),
 		minlength: $.validator.format("至少輸入 {0} 個字."),
 		rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
@@ -1018,7 +1063,9 @@ function fbLogout(){
 			result = true;
 		}
 		return result;
+
 		}, "錯誤的手機號碼格式");
+
 </script>
 
 
