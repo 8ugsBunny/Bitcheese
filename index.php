@@ -537,11 +537,16 @@ EOT;
 						$content = <<<EOT
 							<div class="grid-item">
 
-								<a href="productinfo.html">
-									<div class="merchandise-show"><!--商品呈現大div-->
+								
+								<div class="merchandise-show"><!--商品呈現大div-->
+
+								<a href="productinfo.php?code={$row['product_code']}" class="productinfo_link"><!--商品資訊的連結-->
+
 										
 										
 									<img class="pic-show-pic" src="product_images/{$row["product_code"]}/1.jpg" alt="">	
+
+								</a>
 										
 										
 										<div class="text-show">
@@ -560,7 +565,7 @@ EOT;
 										</div>
 									<div class="info-show"></div><!--read more按鈕-->
 
-								</a>
+								
 				
 					
 								<div class="nav-show"><!--商品呈現導覽列-->
@@ -648,6 +653,11 @@ echo($content);
 <script type="text/javascript">
 		$(document).ready(function(){
 
+			//商品資訊表單處理
+			/*$(".productinfo_link").click(function(e){
+				//e.preventDefault();
+				//$(this).children(".productinfo_form").submit();
+			});*/
 
 			//購物車數量增減按鈕
 			$( ".spinner_for_sp_cart" ).spinner();

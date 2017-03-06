@@ -2,137 +2,94 @@
 
 /**************會員資料頁面***********************/
 
-
-#member-info-title{font-family:myFirstFont;
-font-size:30pt;
-text-align:center;
-margin-top:15px;
-color:#777777;
+#category-title{
+				font-size:15pt;
+				padding-top:5px;
+				padding-bottom:5px;
+				font-family:"Gotham";
+				background-color:#E8B7CC;
 }
 
-#member-info{
-			 margin-top:30px;
-			 margin-bottom:100px;
-		text-align:center;
-	
-}
 
-#member-info-pic{
-				width:15%;
-				margin:0 auto;
-				
-}
+#member_info_nav{width:20%;float:left;}
 
-#member-info-pic>img{
-				width:100%;
-					border-radius:10px;
-	
-}
-
-#member-info-detail{
-	
-
-margin:0 auto;
-margin-top:20px;
-}
-
-.member-information{
-	
-	padding:20px;
+#member_info_nav > ul{
+	list-style-type:none;
 	font-size:10pt;
-
+	color:#666666;
+	padding-left:0;
+	line-height: 30px;　
 }
 
-.member-information-content{
-	
-	color: #BD9F87;
-}
+
+#member_info_nav .left-panel-eng{font-family:"Gotham";font-size:10pt;font-weight: bold;}
+#member_info_nav .special-bg{background-color: #a6a6a6;color:white;}
+#member_info_nav  .special-item:hover{background-color: rgba(179, 179, 179, 0.1);}
+
+
+#show_content_block{width:80%;float:left;}
+
+
+
+
 
 
 
 
 /************商品查詢頁面*******************/
 
-#product-info-title{
-	
-font-family:myFirstFont;
-font-size:30pt;
-text-align:center;
-margin-top:15px;
-color:#777777;
+#product_info{margin-top:30px;width:100%;border:1px solid #EEE;}
 
+
+#product_info_nav{width:20%;float:left;}
+
+#category-title{
+				font-size:15pt;
+				padding-top:5px;
+				padding-bottom:5px;
+				font-family:"Gotham";
+				background-color:#E8B7CC;
 }
 
-#product-info-show{
-	width:100%;
-	border:1px solid #BD9F87;
-	margin-top:15px;
-	margin-bottom:30px;
-}
-
-#product-info-pic{
-	
-width:40%;
-float:left;
-}
-
-
-#product-info-main-pic{
-	width:100%;
-	border-bottom:1px solid #BD9F87;
-	border-right:1px solid #BD9F87;
+#product_info_nav > ul{
+	list-style-type:none;
+	font-size:10pt;
+	color:#666666;
+	padding-left:0;
+	line-height: 30px;　
 }
 
 
-
-#product-info-main-pic>img{
-	width:100%
-	
-}
-
-#product-info-other-pic{
-	width:100%;
-}
-
-.product-other-pic{
-	width:33.33%;
-	float:left;
-	border-right:1px solid #BD9F87;
-	
-}
+#product_info_nav .left-panel-eng{font-family:"Gotham";font-size:10pt;font-weight: bold;}
+#product_info_nav .special-bg{background-color: #a6a6a6;color:white;}
+#product_info_nav  .special-item:hover{background-color: rgba(179, 179, 179, 0.1);}
 
 
+#product_info_display{width:45%;float:left;border-right:1px solid #EEE;border-left:1px solid #b3b3b3;}
 
-#product-info-detail
-{
-	width:50%;
-	float:left;
-	padding-left:15px;
-}
 
-.price{font-family:myFirstFont;
-font-size:20pt;
-color:#777777;
-}
+#product_info_display img{width:100%;height:auto;}
 
-#product-info-detail>select{width:300px;}
+#product_info_pic1{width:100%;border-bottom:1px solid #b3b3b3;}
+#product_info_pic2{width:25%;float:left;border-right:1px solid #b3b3b3;}
+#product_info_pic3{width:25%;float:left;border-right:1px solid #b3b3b3;}
+#product_info_pic4{width:25%;float:left;border-right:1px solid #b3b3b3;}
+#product_info_pic5{width:25%;float:left;}
 
-.pay{border:1px solid #BD9F87;
-          width:150px;
-		  padding:20px;
-		  border-radius:3px;}
-		  
-.putinshoppingcart
-{border:1px solid #BD9F87;
-          width:150px;
-		  padding:20px;
-		  border-radius:3px;
-		  }
-		  
-#dashboard{
-	margin-top:50px;
-	
-}
+
+
+
+
+/***/
+#product_info_aside{width:35%;float:left;}
+
+
+
+
+
+
+
+
 
 /******訂單查詢頁面*********/
 
@@ -775,10 +732,10 @@ padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
 				background-color:#E8B7CC;
 }
 
-#category-title>span{font-family:"微軟正黑體","Microsoft JhengHei"; 
+#category-title>span{
 font-size:10pt;
-
-font-family:"Gotham";}
+font-family:"Gotham";
+	font-weight:bold;　}
 
 
 	
@@ -787,14 +744,13 @@ font-family:"Gotham";}
 	font-size:10pt;
 	color:#666666;
 	padding-left:0;
-	line-height: 30px;　
-
-
+	line-height: 30px;
 }
 
 #left-panel .left-panel-eng{
 				font-family:"Gotham";
 				font-size:10pt;
+				font-weight:bold;　
 
 }
 
