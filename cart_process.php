@@ -41,11 +41,18 @@ if(isset($_POST["product_code"]))
 		$_SESSION["products"][$new_product['product_code']]["product_name"] = $new_product["product_name"];
 		$_SESSION["products"][$new_product['product_code']]["product_price"] = $new_product["product_price"];	
 		
-		if(!isset($_SESSION["products"][$new_product['product_code']]['product_qty'])){
-			$_SESSION["products"][$new_product['product_code']]['product_qty'] = 1;
+		if(isset($_POST['num_of_item'])){//有傳入數量根據傳入的數量設定
+				$_SESSION["products"][$new_product['product_code']]['product_qty'] = $_POST['num_of_item'];
 		}
 		else{
-			$_SESSION["products"][$new_product['product_code']]['product_qty'] = $_SESSION["products"][$new_product['product_code']]['product_qty'] +1;
+			if(!isset($_SESSION["products"][$new_product['product_code']]['product_qty'])){//SESSION內商品數量沒有設定，預設數量為1
+
+				$_SESSION["products"][$new_product['product_code']]['product_qty'] = 1;
+			
+			}
+			else{//SESSION內商品數量有設定，數量再加1
+				$_SESSION["products"][$new_product['product_code']]['product_qty'] = $_SESSION["products"][$new_product['product_code']]['product_qty'] +1;
+			}
 		}
 		//var_dump($_SESSION["products"][$new_product['product_code']]);
 	}
