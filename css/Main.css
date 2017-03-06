@@ -820,7 +820,7 @@ font-family:"Gotham";}
 			text-align: center;
 			width:25%;
 
-			height:auto;
+			height:70%;
 
 			background-color:#E8B7CC;
 			z-index:1;
@@ -858,7 +858,7 @@ font-family:"Gotham";}
 #for_scroll{
 		overflow:scroll;
 		overflow-x:hidden;
-		height:auto ;
+		height:95%;
 		background-color: #fff;
 }
 
