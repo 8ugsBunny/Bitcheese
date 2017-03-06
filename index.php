@@ -754,8 +754,11 @@ echo($content);
 				$(this).children(".shopping_cart_form").submit();
 				e.stopPropagation();
 			});
-			
+
 		});
+
+			
+			
 </script>
 
 
