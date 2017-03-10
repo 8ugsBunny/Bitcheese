@@ -249,7 +249,7 @@ include_once("start_session.php");
 					<br>
 					<input class="input_2 required" type="password" name="password_login" placeholder=" 密碼 ">
 					<span class="login_error_tips"></span>
-
+					<div class="login_error_tips"></div>
 					<input type="hidden" name="log_in" value="log_in">
 				</form>
 				
@@ -537,11 +537,16 @@ EOT;
 						$content = <<<EOT
 							<div class="grid-item">
 
-								<a href="productinfo.html">
-									<div class="merchandise-show"><!--商品呈現大div-->
+								
+								<div class="merchandise-show"><!--商品呈現大div-->
+
+								<a href="productinfo.php?code={$row['product_code']}" class="productinfo_link"><!--商品資訊的連結-->
+
 										
 										
 									<img class="pic-show-pic" src="product_images/{$row["product_code"]}/1.jpg" alt="">	
+
+								</a>
 										
 										
 										<div class="text-show">
@@ -560,7 +565,7 @@ EOT;
 										</div>
 									<div class="info-show"></div><!--read more按鈕-->
 
-								</a>
+								
 				
 					
 								<div class="nav-show"><!--商品呈現導覽列-->
@@ -648,6 +653,11 @@ echo($content);
 <script type="text/javascript">
 		$(document).ready(function(){
 
+			//商品資訊表單處理
+			/*$(".productinfo_link").click(function(e){
+				//e.preventDefault();
+				//$(this).children(".productinfo_form").submit();
+			});*/
 
 			//購物車數量增減按鈕
 			$( ".spinner_for_sp_cart" ).spinner();
@@ -818,15 +828,18 @@ echo($content);
 		});
 
 	});
-	//普通註冊和登入
+	
+	//普通註冊
 	$("#register-page-new").click(function(e){
 		e.preventDefault();
 		$("#register_form").submit();
 	});
 
+	//普通登入
 	$("#login-page-nav").click(function(e){
 		e.preventDefault();
 		$("#login_form").submit();
+	
 	});
 
 	//取回密碼表單送出
@@ -982,66 +995,12 @@ function fbLogout(){
 
 
 </script>
-<!--驗證表單的JS-->
-<script type="text/javascript">
-	$(document).ready(function(){
-	
-		$("#register_form").validate({
-
-
-			errorContainer: ".register_error_tips",
-
-			submitHandler: function(form) {
-				form.submit();
-			},
-			errorPlacement: function(error, element) {
-
-
-				element.next('.register_error_tips').html(error);
-
-			},
-			rules: {
-				retype_password: {
-					equalTo : '#password'
-				}
-			}
-
-		});
-		
-		$("#login_form").validate({
-
-			errorContainer: ".login_error_tips",
-
-			submitHandler: function(form) {
-				form.submit();
-			},
-			errorPlacement: function(error, element) {
-				element.next(".login_error_tips").html(error);
-			}
-			
-		});
-
-		$("#recieve_password_form").validate({
-
-			submitHandler: function(form) {
-				form.submit();
-			},
-			errorPlacement: function(error, element) {
-
-				$("#pw-back-page-tip").html(error);
-
-			}
-			
-		});
-	});
-</script>
 <script>
 	jQuery.extend(jQuery.validator.messages, {
 
 		required: "必填.",
 		remote: "Please fix this field.",
 		email: "錯誤的Email格式.",
-
 		url: "請輸入正確的網址.",
 		date: "請輸入正確的日期.",
 		dateISO: "請輸入正確的 (ISO) 日期格式.",
@@ -1059,6 +1018,105 @@ function fbLogout(){
 		min: $.validator.format("請輸入大於等於 {0} 的值.")
 	});
 </script>
+<!--驗證表單的JS-->
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$("#register_form").validate({
+
+			onkeyup: false,  //turn off auto validate whilst typing
+
+			errorContainer: ".register_error_tips",
+
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
+
+
+				element.next('.register_error_tips').html(error);
+
+			},
+			rules: {
+						retype_password: {
+							equalTo : '#password'
+						},
+						email: {
+							remote: {
+								url: "validate_of_register.php",
+								type: "POST",
+								data: {
+									email: function(){
+												return $('#register_form :input[name="email"]').val();
+											}
+										}
+									}
+								}
+					},
+			messages: {
+						email: {
+							remote: "此信箱已註冊."
+						}
+					}
+
+		});
+		
+		
+
+			$("#login_form").validate({
+
+			 debug	: true , 
+			 onkeyup: false,  //turn off auto validate whilst typing
+
+			errorContainer: ".login_error_tips",
+
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
+				element.next(".login_error_tips").html(error);
+			},
+			rules: {
+					password_login: {
+								remote: {
+									url: "validate_of_login.php",
+									type: "POST",
+									data: {
+										email_login: function(){
+													return $('#login_form :input[name="email_login"]').val();
+												},
+										password_login: function(){
+													return $('#login_form :input[name="password_login"]').val();
+												}
+											}
+										}
+									}
+					},
+			messages: {
+						password_login: {
+							remote: "信箱或是密碼錯誤."
+						}
+					}
+				
+			
+		});
+	
+
+		$("#recieve_password_form").validate({
+
+			submitHandler: function(form) {
+				form.submit();
+			},
+			errorPlacement: function(error, element) {
+
+				$("#pw-back-page-tip").html(error);
+
+			}
+			
+		});
+	});
+</script>
+
 <script>
 	jQuery.validator.addMethod("mobileTaiwan", function( value, element ) {
 		var str = value;

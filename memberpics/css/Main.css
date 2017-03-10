@@ -1,0 +1,1542 @@
+﻿
+
+/**************會員資料頁面***********************/
+
+#category-title{
+				font-size:15pt;
+				padding-top:5px;
+				padding-bottom:5px;
+				font-family:"Gotham";
+				background-color:#E8B7CC;
+}
+
+
+#member_info_nav{width:20%;float:left;}
+
+#member_info_nav > ul{
+	list-style-type:none;
+	font-size:10pt;
+	color:#666666;
+	padding-left:0;
+	line-height: 30px;　
+}
+
+
+#member_info_nav .left-panel-eng{font-family:"Gotham";font-size:10pt;font-weight: bold;}
+#member_info_nav .special-bg{background-color: #a6a6a6;color:white;}
+#member_info_nav  .special-item:hover{background-color: rgba(179, 179, 179, 0.1);}
+
+
+#show_content_block{width:80%;float:left;}
+
+
+
+
+
+
+
+
+/************商品查詢頁面*******************/
+
+#product_info{margin-top:30px;width:100%;border:1px solid #EEE;}
+
+
+#product_info_nav{width:20%;float:left;}
+
+#category-title{
+				font-size:15pt;
+				padding-top:5px;
+				padding-bottom:5px;
+				font-family:"Gotham";
+				background-color:#E8B7CC;
+}
+
+#product_info_nav > ul{
+	list-style-type:none;
+	font-size:10pt;
+	color:#666666;
+	padding-left:0;
+	line-height: 30px;　
+}
+
+
+#product_info_nav .left-panel-eng{font-family:"Gotham";font-size:10pt;font-weight: bold;}
+#product_info_nav .special-bg{background-color: #a6a6a6;color:white;}
+#product_info_nav  .special-item:hover{background-color: rgba(179, 179, 179, 0.1);}
+
+
+#product_info_display{width:45%;float:left;border-right:1px solid #EEE;border-left:1px solid #b3b3b3;}
+
+
+#product_info_display img{width:100%;height:auto;}
+
+#product_info_pic1{width:100%;border-bottom:1px solid #b3b3b3;}
+#product_info_pic2{width:25%;float:left;border-right:1px solid #b3b3b3;}
+#product_info_pic3{width:25%;float:left;border-right:1px solid #b3b3b3;}
+#product_info_pic4{width:25%;float:left;border-right:1px solid #b3b3b3;}
+#product_info_pic5{width:25%;float:left;}
+
+
+
+
+
+/***/
+#product_info_aside{width:35%;float:left;}
+
+
+
+
+
+
+
+
+
+/******訂單查詢頁面*********/
+
+#check-order-title{
+	
+font-family:myFirstFont;
+font-size:30pt;
+text-align:center;
+margin-top:15px;
+color:#777777;
+}
+
+#enter-order-number{
+	text-align:center;	
+
+	border:1px solid #BD9F87;
+	padding-top:30px;
+	padding-bottom:30px;
+	color:#003D60;
+	font-size:10pt;
+	width:50%;/*整體頁面之50%*/
+	margin:25px auto;
+	border-radius:3px;
+	box-shadow: 1px 1px 1px #808080;
+	
+	}
+
+#enter-order-number>input{
+width:350px;}
+
+#show-order-info{
+				margin-top:80px;
+				text-align:center;
+					box-shadow: 1px 1px 1px #808080;
+						border:1px solid #BD9F87;
+						padding:10px;
+				
+}
+
+#toggle-other-order{
+	
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align:center;
+}
+
+/*******結帳頁面check-bill*******/
+
+
+#checkbill_title{font-family: myfirstfont;
+color:#EEE;
+font-size:30pt;
+margin:0 auto ;
+width:50%;
+text-align: center;
+margin-top:30px;}
+
+#steps_indicator{width:50%; margin:0 auto;margin-top:30px;border-radius:3px;
+border:2px solid #BD9F87;text-align: center; margin-bottom: 50px;}
+#step_1{float:left;width:50%;padding:10px;border-right:2px solid #BD9F87; background-color: #003D60}
+#step_2{float:left;width:50%;padding:10px;background-color: #EEE;}
+
+.span_1{font-family: myfirstfont;
+font-size:13pt;
+color:white;}
+
+#step_1>.span_2{color:white;font-size:10pt;}
+
+#step_2>.span_1{color:#8c8c8c;color:rgba(140, 140, 140, 0.5);}
+
+#step_2>.span_2{
+	 font-size:10pt;
+	  color:rgba(140, 140, 140, 0.5);
+}
+
+
+
+#check-bill-container{width:100%; text-align: center;
+border-top:1px solid #EEE;
+border-bottom:1px solid #EEE;
+border-left:1px solid #EEE;}
+
+.check-bill-pic{width:25%;border-right:1px solid #EEE;}
+.check-bill-pic>img{width:100%;height:auto;}
+.check-bill-title{width:25%;border-right:1px solid #EEE;}
+.check-bill-amount{width:25%;border-right:1px solid #EEE;}
+.check-bill-price{width:25%;border-right:1px solid #EEE;}
+
+.check-bill-pic,
+.check-bill-title,
+.check-bill-amount,
+.check-bill-price{float:left;}
+
+
+.check-bill-coupon{width:75%;margin-left:25%;text-align: center;
+border:1px solid #EEE;
+}
+.check-bill-coupon-title{width:33%;}
+.check-bill-coupon-serial{width:33%;}
+.check-bill-coupon-result{width:33%;}
+
+.check-bill-coupon-title,
+.check-bill-coupon-serial,
+.check-bill-coupon-result{float:left;}
+
+
+
+#check-bill-total{width:50%;margin-left:50%;text-align: center;border:1px solid #EEE;}
+#check-bill-total-title{width:50%;}
+#check-bill-total-result{width:50%;}
+
+
+
+#check-bill-total-title,
+#check-bill-total-result{float:left;}
+
+
+#delivery_method{width: 100%;margin-top:80px;margin-bottom:10px;}
+#delivery_method_tag{
+	width:25%;border-top:2px solid #BD9F87;border-left:2px solid #BD9F87;border-right:2px solid #BD9F87;
+	padding:5px;
+	font-size:16pt;
+	text-align: center;
+	background-color:#003D60;
+	color:white;
+	border-top-right-radius:3px;
+	border-top-left-radius:3px;
+}
+
+#delivery_method_tag>img{width:20px ;height:20px; padding-top:-100px;}
+
+
+
+
+#delivery_method_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:2px solid #BD9F87;}
+
+#delivery_method_BC{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#delivery_method_711{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#delivery_method_FM{padding-top:10px;padding-bottom:10px; padding-left:10px;}
+
+
+#delivery_method_BC>input{width:20px; height:20px;vertical-align:middle;}
+#delivery_method_711>input{width:20px; height:20px;vertical-align:middle;}
+#delivery_method_FM>input{width:20px; height:20px;vertical-align:middle;}
+
+
+#delivery_method_BC:hover{background-color:rgba(179, 179, 179, 0.1);}
+#delivery_method_711:hover{background-color:rgba(179, 179, 179, 0.1);}
+#delivery_method_FM:hover{background-color:rgba(179, 179, 179, 0.1);}
+
+
+
+
+#payment_method{width:100%; margin-top:30px;}
+#payment_method_tag{
+	width:25%;border-top:2px solid #BD9F87;border-left:2px solid #BD9F87;border-right:2px solid #BD9F87;
+	padding:5px;
+	font-size:16pt;
+	text-align: center;
+	background-color:#003D60;
+	color:white;
+	border-top-right-radius:2px;
+	border-top-left-radius:2px; 
+
+}
+
+#payment_method_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:2px solid #BD9F87;}
+
+#payment_method_after{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#payment_method_before{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#payment_method_card{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px solid #EEE;}
+#payment_method_ticket{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px;}
+
+#payment_method_after>input{width:20px; height:20px;vertical-align:middle;}
+#payment_method_before>input{width:20px; height:20px;vertical-align:middle;}
+#payment_method_card>input{width:20px; height:20px;vertical-align:middle;}
+#payment_method_ticket>input{width:20px; height:20px;vertical-align:middle;}
+
+#payment_method_after:hover{background-color:rgba(179, 179, 179, 0.1);}
+#payment_method_before:hover{background-color:rgba(179, 179, 179, 0.1);}
+#payment_method_card:hover{background-color:rgba(179, 179, 179, 0.1);}
+#payment_method_ticket:hover{background-color:rgba(179, 179, 179, 0.1);}
+
+
+
+#bill_info{width: 100%; margin-top:10px;}
+#bill_info_tag{
+	width:25%;border-top:2px solid #BD9F87;border-left:2px solid #BD9F87;border-right:2px solid #BD9F87;
+	padding:5px;
+	font-size:16pt;
+	text-align: center;
+	background-color:#003D60;
+	color:white;
+
+}
+
+#bill_info_content{width:100%;border:1px solid #EEE;font-size:13pt;border-top:2px solid #BD9F87;}
+
+#bill_info_name{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#bill_info_phone{padding-top:10px;padding-bottom:10px;padding-left:10px;border-bottom:1px solid #EEE;}
+#bill_info_BC{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px solid #EEE;}
+#bill_info_711{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px solid  #EEE;}
+#bill_info_FM{padding-top:10px;padding-bottom:10px; padding-left:10px;border-bottom:1px;}
+
+#bill_info_name:hover{background-color:rgba(179, 179, 179, 0.1);}
+#bill_info_phone:hover{background-color:rgba(179, 179, 179, 0.1);}
+#bill_info_BC:hover{background-color:rgba(179, 179, 179, 0.1);}
+#bill_info_711:hover{background-color:rgba(179, 179, 179, 0.1);}
+#bill_info_FM:hover{background-color:rgba(179, 179, 179, 0.1);}
+
+
+#bill_info_name{letter-spacing: 10px;}
+#bill_info_phone{letter-spacing: 14.5px;}
+
+
+
+
+
+
+footer
+
+{margin-top:200px;
+	width:100%;
+	background-color:#BD9F87;
+	color:white;}
+
+
+#footer_logo_title{
+		font-family: myfirstfont;
+		font-size:30pt;
+		border-bottom:1px solid white;
+		width:20%;
+		padding-left:20px;
+		float:left;
+		text-align: center;
+}	
+
+#footer_logo_title>div{
+	font-family:'century gothic';
+	font-size:10pt;
+}	
+
+#footer_media_title{width:20%;float:left;text-align: center; padding-top:25px;font-size:15pt;}
+#footer_info_title{width:20%;float:left;text-align: center; padding-top:25px;font-size:15pt;}
+#footer_line_title{width:20%;float:left;text-align: center; padding-top:25px;font-size:15pt;}
+
+#footer_logo_info{width:20%;float:left; text-align: center;margin-bottom:50px;}
+#footer_media_info{width:20%;float:left;text-align: center;margin-bottom:50px;}
+#footer_info_info{width:20%;float:left;text-align: center; margin-bottom:50px;}
+#footer_line_info{width:20%;float:left;text-align: center; margin-bottom:50px;}
+
+#footer_line_info>img{
+	width:220px;
+	height:auto;
+}
+
+.media_icon{
+
+display:inline-block;
+
+width:50px;
+height:50px;
+border-radius:25px;
+text-align: center;
+border:1px solid white;
+padding-top:10px;
+cursor:pointer;
+
+}	   
+
+
+
+
+/****通用設定*****/
+
+*{
+box-sizing:border-box;
+}
+
+
+@font-face{     
+				/*設定自訂字型*/
+				font-family:myFirstFont;
+				src: url("../fonts/SignPainter-HouseScript.woff");
+				src: url("../fonts/SignPainter-HouseScript.ttf");
+}
+
+@font-face{     
+				/*引用字體*/
+				font-family:Gotham;
+				src: url("../fonts/GothamXLight.woff");
+				src: url("../fonts/GothamXLight.ttf");
+}
+
+
+
+
+
+#eliminate-other-css{
+		/*將瀏覽器預設的8 px margin去掉*/
+		margin:0;
+		/*設定字型群集*/
+	    font-family:"Noto Sans TC","微軟正黑體","Microsoft JhengHei";
+}
+
+.special-font{
+			/*設定自行為自訂字型*/
+	         font-family:myFirstFont;
+}
+
+
+
+
+
+/*設定欄位寬度*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/*類別代有col-值者,向左漂浮*/
+/* [class*="col-"] {float: left;} */
+
+/*每一排後結束漂浮狀態*/
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+/******index-page-css******/
+
+
+/*loading按鈕*/
+#hahaha{width:100px; margin:0 auto;}
+
+#container{
+				/*設定網頁體置中*/
+				width:80%;
+				margin:0 auto;
+}
+
+.clearfix{
+			/*結束float*/
+			clear:both;
+}
+
+
+/*右下方按鈕大區塊*/
+#aside_button{
+	position: fixed;
+	right:50px;
+	bottom:10px;
+}
+
+/*右下方按鈕-優惠商品*/
+#Bonus_show{background-color:#99ccff;
+			width:50px;
+			height:50px;
+			border-radius:25px;
+			color:white;
+			text-align: center;
+			padding-top:5px;
+			margin-bottom:5px;}
+
+
+/*右下方按鈕-線上客服*/
+#custom_service{background-color:#F5F0EC;
+			width:50px;
+			height:50px;
+			border-radius:25px;
+			color:#b3b3b3;
+			text-align: center;
+			padding-top:5px;
+			margin-bottom:5px;}
+
+
+/*右下方按鈕-回到上方*/
+#back_to_top{background-color:#E8B7CC;
+			width:50px;
+			height:50px;
+			border-radius:25px;
+			color:white;
+			text-align: center;
+			padding-top:8px;
+			font-size:15pt;}
+
+
+header{
+		/*先前有設定過container,整體網頁置中*/
+		/*設定寬度為container的100%*/
+		width:100%;
+		/*設定position relative讓nav定位
+		/*此行目前用不到,因nav設定為fixed而非absolute*/
+		position:relative;
+}
+
+
+#logo{
+			/*設定Logo置中*/
+			margin:0 auto;
+			text-align:center;
+}
+
+#logo>img{
+				/*設定Logo圖片尺寸*/
+				width:96px;
+				height:137px;
+				/*使logo向下移動,頂端與nav切齊*/
+				margin-top:50px;	
+          		
+}
+
+#tag>ul{
+			/*設定tag底下ul的樣式*/
+           list-style-type:none;
+			/*將左padding取消*/
+			padding-left:0;
+			/*將上下margin取消*/
+			margin-top:0;
+			margin-bottom:0;
+			text-align:center;
+}
+
+
+#tag li{
+			/*設定tag底下li的樣式*/			
+			font-size:10pt;
+			color:black;
+			font-weight: bold;
+			/*設定標籤內的文字 距離框線的距離*/
+			padding:2px;
+			/*設定標籤的外框線 且下框線由hr取代*/
+			border-top:solid 1px;
+			border-left:solid 1px;
+			border-right:solid 1px;
+			border-top-left-radius:2px;
+			border-top-right-radius:2px;
+			border-color:#EEE;
+			/*設定標籤寬度*/
+			width:160px;
+			/*將標籤置中*/
+			margin:0 auto;
+			/*使標籤和logo分開些許距離*/
+			margin-top:20px;
+			font-family:"Gotham";
+			letter-spacing:1px;
+		
+}
+
+.horizon{
+	/*設定水平線樣式*/
+	/*將預設上下margin取消*/
+	margin-top:0;
+	margin-bottom:0;
+	/*將預設border取消*/
+	border:0;
+	/*設定高度*/
+	height:0.5pt;   
+	background-color:#EEE;
+}
+
+nav>ul{
+			/*設定nav底下ul的樣式*/
+			list-style-type:none;
+			/*將預設的左padding取消*/
+			padding-left:0;
+			/*將預設的上下margin取消*/
+			margin-top:0;
+			margin-bottom:0;
+}
+
+
+nav li{
+			/*設定nav底下li的樣式*/
+			font-size:13px;
+			color:#595959;/*灰色*/
+			margin:0 1px;
+			/*設定背景顏色為白色*/
+			background-color: rgba(255, 255, 255, 0.7);
+			/*設定文字內容與框線距離*/
+			padding-left:10px;
+			padding-right:10px;
+			padding-top:5px;
+			padding-bottom:5px;
+			border-radius:2px;
+			border:1px solid #EEE;
+		    /*向左漂浮*/
+			float:left;
+			
+			
+}
+
+nav{
+		/*讓nav定位在網頁右上角*/
+	    position:fixed;
+		top:5px;
+		right:1px;
+		z-index:1;
+}
+
+nav a:link{
+			text-decoration: none;
+			color:#595959;
+}
+
+nav a:visited{
+				color:#595959;
+}
+
+nav a:hover li{
+			color:#EEE;
+			background-color: #b3b3b3;
+}
+
+#sign-in,#sign-out,#trigger-category,#contact-us{
+									cursor:pointer;
+}
+
+#trigger-category:hover{
+		color:#EEE;
+		background-color: #b3b3b3;
+
+}
+
+#sign-in:hover{color:#EEE;
+		background-color: #b3b3b3;}
+
+#sign-out:hover{
+		color:#EEE;
+		background-color: #b3b3b3;
+}
+
+#contact-us:hover{
+		color:#EEE;
+		background-color: #b3b3b3;
+}
+
+
+#search-block{
+background-color: white;
+border:none;/*將input外框取消*/
+border-radius:3px;
+width:150px;
+padding-bottom:0;/*將下方padding取消使格子看起來一樣大 */
+
+}
+
+
+
+
+
+
+#display{
+			/*使display區塊大小符合container大小*/
+			/*container已設定為整體網頁的90%*/
+			width:100%;
+			/*設定區塊上下margin*/
+			margin-top:5px;
+			margin-bottom:5px;
+}
+
+/* #display>img{
+					將圖片設定為符合display區塊的大小
+					width:100%;
+					height:auto;
+					border-bottom:solid;
+					border-width:1px;
+					border-color:#BD9F87;印金色
+} */
+
+
+/*****以下開始加入各個套件的樣式表*****/
+
+
+/*****slider-function****/
+.slider-container,.carousel,.carousel-inner{width:100%;}
+
+.item{
+		/*控制廣告橫幅slider的圖片大小*/
+		width:100%;
+		height:100%;
+		
+}
+
+.carousel-inner > .item > img,.carousel-inner > .item > a > img {
+						/*使照片符合slider的div大小*/
+						width:100%;
+						height:100%;
+}
+
+#myCarousel a{
+			/*取消slider陰影*//*0202*/
+			background-image: none;
+}
+
+
+	
+
+/*******left-panel-page*****/
+
+
+#left-panel{
+			width:25%;
+
+			height:auto;
+
+			background-color:white;
+			z-index:1;
+			position:fixed;
+			/*display: none;*/
+			left: -25%;/*0202*/
+			box-shadow: 1px 1px 1px black;
+}	
+
+
+
+#category-title{
+				font-size:15pt;
+				padding-top:5px;
+				padding-bottom:5px;
+
+				font-family:"Gotham";
+
+				background-color:#E8B7CC;
+}
+
+#category-title>span{
+font-size:10pt;
+font-family:"Gotham";
+	font-weight:bold;　}
+
+
+	
+#left-panel > ul{
+	list-style-type:none;
+	font-size:10pt;
+	color:#666666;
+	padding-left:0;
+	line-height: 30px;
+}
+
+#left-panel .left-panel-eng{
+				font-family:"Gotham";
+				font-size:10pt;
+				font-weight:bold;　
+
+}
+
+#left-panel .special-bg{
+	background-color: #a6a6a6;
+	color:white;
+}
+
+
+#left-panel  .special-item:hover{
+						background-color: rgba(179, 179, 179, 0.1);
+}
+
+
+
+/******left-shopping-cart*****/
+
+#left-shopping-cart a:hover{text-decoration: none; color: #b3b3b3;}
+
+#left-shopping-cart a span {font-size:9pt}
+
+#left-shopping-cart{
+			text-align: center;
+			width:25%;
+
+			height:70%;
+
+			background-color:#E8B7CC;
+			z-index:1;
+			position:fixed;
+			/*display: none;*/
+			left: -25%;/*0202*/
+			box-shadow: 1px 1px 1px black;
+			font-family:"微軟正黑體","Microsoft JhengHei";
+
+}	
+
+#shopping-cart-title{
+				font-size:15pt;
+				padding:5px;
+
+				font-family:"Gotham";
+
+				border-bottom:1px solid #b3b3b3;
+				text-align: left;
+
+
+}
+	
+#left-shopping-cart #empty_tip{color:white;font-size:13pt;padding:5px;}
+
+
+
+/*#left-shopping-cart > ul{
+	list-style-type:none;
+	font-size:13pt;
+	color:white;
+	padding-left:0;
+}*/
+
+#for_scroll{
+		overflow:scroll;
+		overflow-x:hidden;
+		height:95%;
+		background-color: #fff;
+}
+
+.purchase-details{
+margin-top:5px;
+text-align:left;
+width:100%;
+
+}
+
+.purchase-pic{
+float:left;
+width:30%;
+
+}
+
+
+.purchase-pic>img{
+	width:100%;
+	height:auto;
+}
+
+.for_the_border{border-bottom:1px solid #EEE;}
+
+
+.purchase-content{
+float:left;
+width:70%;
+font-size:13pt;
+color:white;
+text-align:center;
+}
+
+.remove-item{color:#BD9F87;font-size:8pt;}
+
+.purchase-content select {width:70%;
+color:black;
+}
+
+.pruchase-content-amount{padding-top:15px;}
+
+.purchase-content-price
+{padding-top:10px;
+padding-bottom:10px;
+background-color:#b3b3b3;
+border-radius:2px;
+font-size:12pt;}	
+
+.purchase-tips-details{
+	font-size:10pt;
+	color:white;
+	text-align:center;
+	padding:25px;
+}
+
+#purchase-button{
+
+	font-family:"微軟正黑體","Microsoft JhengHei";
+	font-size:13pt;
+	text-align:center;
+	padding:10px;
+	background-color: #fff68f;
+
+}
+
+#purchase-button:hover{color:#b3b3b3;}
+
+#purchase-button a:visited {color:white;}
+
+.spinner_for_sp_cart{/*購物車增減數量按鈕*/
+	width: 20px;
+}
+
+/*******login-page-css*****/
+
+#login-page{
+			background-color:hsla(0, 0%, 100%,0.7);
+			display:none;
+			/*使login-page置中*/
+			width:600px;
+			height:500px;
+			left:50%; 
+			top:50%;
+			margin-left:-300px;
+			margin-top:-250px;
+			z-index:3;
+			position: fixed;
+			border:solid 1px;
+			border-color:#EEE;
+			border-radius:3px;
+			box-shadow: 1px 1px 3px #a6a6a6;
+}
+			
+
+
+.login-background-color{
+						/*登入頁面背景顏色*/
+						width:100%;/*1920px;*/
+						height:100%;/*1080px;*/
+						/*background:rgba(204,204,204,0.9);*/
+						position: fixed;
+						z-index: 2; 
+						display: none;
+					    background: url(../images/test2.jpg);
+					    background-size: cover;
+} 
+
+
+   
+#login-page-content{width:100%;}
+
+
+
+
+#login-page-logo>img{
+					/*設定logo大小 */
+					width:236px;
+					height:42px;
+					margin:0 auto;
+					display:block;
+}
+
+.login_error_tips{font-size:10pt;color:red;width:38%;}
+
+#login-page-info>form{width:80%;
+					margin:0 auto;
+					margin-left:150px;
+}
+
+
+#login-page-info>form>.input_1{
+						display:block;
+						margin:0 auto;
+
+
+						width:62%;
+
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+						display:inline-block;
+						margin-top:30px;
+}
+
+#login-page-info>form>.input_2{
+						display:block;
+						margin:0 auto;
+						margin-top:5px;
+						width:62%;
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+						display:inline-block;
+}
+
+#log_in_with_facebook{
+width:300px;
+border:1px solid white;
+background-color: #4267B2;
+color:white;
+height:30px;
+vertical-align: middle;
+font-size:10pt;
+
+border-radius:3px;
+margin:0 auto;
+margin-top:30px;
+display: block;
+
+}
+
+#login-page-nav{
+				font-size:10pt;
+				margin-top:30px;
+				text-align: center;
+}
+
+#login-page-forget{
+					font-size:10pt;
+					margin-top:5px;
+					text-align: center;
+}
+
+
+
+#login-page-new{
+				font-size:10pt;
+				padding:10px;
+				margin:0 auto;
+				margin-top:30px;
+				background-color: #b3b3b3;
+				color:white;
+				text-align: center;
+}
+
+
+
+/*****pw-back******/
+
+#pw-back-page{
+			background-color:hsla(0, 0%, 100%,0.7);
+			display:none;
+			/*使login-page置中*/
+			width:600px;
+			height:400px;
+			left:50%; 
+			top:50%;
+			margin-left:-300px;
+			margin-top:-200px;
+			z-index:3;
+			position: fixed;
+			border:solid 1px;
+			border-color:#EEE;
+			border-radius:3px;
+			box-shadow: 1px 1px 3px #a6a6a6;
+}
+			
+
+
+
+   
+#pw-back-page-content{
+					text-align:center;/*使所有內容置中*/
+					width:100%;}
+
+.cancel_button>.fa-times{
+							font-size: 20pt;
+							color:white;
+							   
+}
+
+.cancel_button{
+				border:1px solid #b3b3b3;
+				border-radius:15px;
+				width:30px;
+				height:30px;
+				margin:0 auto;
+ 				margin-top:20px;
+				margin-bottom:25px;
+				background-color: #b3b3b3;
+				text-align: center;
+}
+
+
+#pw-back-page-logo>img{
+					/*設定logo大小 */
+					width:236px;
+					height:42px;
+}
+
+.required{
+						display:block;
+						margin:0 auto;
+						margin-top:5px;
+						width:50%;
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+}
+
+
+
+
+
+
+#pw-back-page-forget{
+					font-size:10pt;
+					margin-top:5px;
+}
+
+
+
+#pw-back-page-new{
+				font-size:10pt;
+				padding:10px;
+				margin:0 auto;
+				margin-top:100px;
+				background-color: #b3b3b3;
+				color:white;
+}
+
+
+#pw-back-page-tip{
+	margin-top:50px;
+	font-size:10pt;
+}
+
+/****register****/
+
+	#register-page{
+			background-color:hsla(0, 0%, 100%,0.7);
+			/*使login-page置中*/
+			width:600px;
+			height:500px;
+			left:50%; 
+			top:50%;
+			margin-left:-300px;
+			margin-top:-250px;
+			z-index:3;
+			position: fixed;
+			border:solid 1px;
+			border-color:#EEE;
+			border-radius:3px;
+			box-shadow: 1px 1px 3px #a6a6a6;
+			display: none;
+}
+			
+
+
+.register-background-color{
+						/*登入頁面背景顏色*/
+						width:100%;/*1920px;*/
+						height:100%;/*1080px;*/
+						/*background:rgba(204,204,204,0.9);*/
+						position: fixed;
+						z-index: 2; 
+						display: none;
+					    background: url(../images/test2.jpg);
+					    background-size: cover;
+} 
+
+
+   
+#register-page-content{width:100%;}
+
+
+
+#register-page-logo>img{
+					/*設定logo大小 */
+					width:236px;
+					height:42px;
+					display: block;
+					margin:0 auto;
+}
+
+.register_error_tips{
+					margin-top: 10px; 
+					margin-bottom: 10px;
+					color:red;
+					font-size: 10pt;
+}
+
+
+
+#register-page-info{width:80%;
+					margin-left:100px;
+					margin-top:30px;}
+
+.register_error_tips{width:30%;color:red;font-size:10pt;}
+
+#register-page-info>.input_1{
+						display:inline-block;
+						margin:0 auto;
+						width:70%;
+
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+}
+
+#register-page-info>.input_2{
+
+						display:inline-block;
+
+						margin:0 auto;
+						margin-top:5px;
+						width:70%;
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+}
+
+#register-page-info>.input_3{
+
+						display:inline-block;
+
+						margin:0 auto;
+						margin-top:5px;
+						width:70%;
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+}
+
+#register-page-info>.input_4{
+
+						display:inline-block;
+
+						margin:0 auto;
+						margin-top:5px;
+						width:70%;
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+}
+
+#register-page-info>.input_5{
+
+						display:inline-block;
+
+						margin:0 auto;
+						margin-top:5px;
+						width:70%;
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+}
+
+#register-page-info>.input_6{
+
+						display:inline-block;
+
+						margin:0 auto;
+						margin-top:5px;
+						width:70%;
+						height:30px;
+						border-radius:2px;
+						border:1px solid #EEE;
+}
+
+
+#register-page-nav{
+				font-size:10pt;
+				margin-top:30px;
+}
+
+#register-page-forget{
+					font-size:10pt;
+					margin-top:5px;
+}
+
+
+
+#register-page-new{
+				font-size:10pt;
+				padding:10px;
+				margin:0 auto;
+				margin-top:30px;
+				background-color: #b3b3b3;
+				color:white;
+				text-align: center;
+}
+
+
+
+
+ 
+ 
+/**********Masonry css for percent*************/
+	 
+	 
+.grid{background:"";/*調整masonry div 背景顏色*/}
+
+
+.grid-sizer,.grid-item{width: 24.4%;/*調整masonry格子寬度*/}
+
+.gutter-sizer{ width: 0.8%;/*控制格子左右寬度*/}
+
+.grid-item{
+				/*調整masonry格子樣式*/
+				/*height:600px;*/
+				float: left;
+				background-color: "";
+				border: 1px solid;
+				border-color: #EEE;
+				border-radius: 2px;
+				margin-bottom: 10px;
+				/*box-shadow:1px 1px 10px #000000;*/
+				font-family:"微軟正黑體","Microsoft JhengHei";
+				
+}
+
+.grid-item:hover{box-shadow:1px 1px 3px #595959;
+				border-color:#b3b3b3;
+			transition:0.5s;
+}
+
+
+/*調整masonry格子高度*/
+/*.grid-item--height2 { height: 500px; }
+.grid-item--height3 { height: 400px; }
+.grid-item--height4 { height: 300px; }*/
+
+
+.grid:after {
+				content: '';
+				display: block;
+				clear: both;
+}	
+
+/***************Grid-item 背景色****************/
+
+.grid-item-color-0{
+	background: #EEE;
+}
+.grid-item-color-1{
+	background:#EEE;
+}
+.grid-item-color-2{
+	background: #EEE;
+}
+.grid-item-color-3{
+	background: #60B9BD;
+}
+.grid-item-color-4{
+	background: #E7E1D9;
+}
+.grid-item-color-5{
+	background: #F6DDC0;
+}
+.grid-item-color-6{
+	background: #F0D1A3;
+}
+.grid-item-color-7{
+	background: #F0D4C2;
+}
+.grid-item-color-8{
+	background: #F1D3BA;
+}
+.grid-item-color-9{
+	background: #EAE4E3;
+}
+.grid-item-color-10{
+	background: #F5F2CE;
+}
+.grid-item-color-l1{
+	background: #D7B7A7;
+}
+
+
+/**********Masonry css for pixel version*************/
+
+/*.grid{
+	background: #EEE;
+    margin: 0 auto;
+}
+
+.grid-item{
+		  width: 270px;
+		  height:600px;
+		  float: left;
+		  background:#BD9F87;
+		  border: 2px solid #333;
+		  border-color: hsla(0, 0%, 0%, 0.5);
+		  border-radius: 5px;
+		  box-sizing: border-box;
+		}
+		
+.grid-item--height2 { height: 500px; }
+.grid-item--height3 { height: 400px; }
+.grid-item--height4 { height: 300px; }
+
+
+.grid::after {
+		  content: "";
+		  display: block;
+		  clear: both;
+}	
+*/
+
+
+
+/******調整masonry商品呈現區塊的樣式***********/
+
+
+
+.merchandise-show{
+					/*使masonry內部放置所有資訊的大div寬度都符合每個格子大小*/
+					width:100%;
+}
+
+
+.pic-show-pic{
+				/*調整masonry內部置放圖片div內圖片寬度符合外部div寬度大小*/
+				width:100%;
+				height:auto;
+}
+
+.pic-show-pic>img{width:100%;
+height:auto;}
+
+
+.text-show{width:100%;}
+
+
+
+
+.info-show{
+				/*使info-show-button按鈕靠右對齊*/
+				text-align:center;
+				/*info-show div下方放置一條水平線*/
+				border-bottom:solid;
+				border-width:1px;
+				border-color:white;
+				/*控制寬度高度*/
+		        width:100%;
+			    height:10%;
+				/*調整字體大小與位置和顏色*/
+				font-size:15pt;
+				padding-bottom:5px;
+				color:#595959;/*黑色*/
+}
+
+
+.nav-show{
+	
+				/*調整下方一鍵購買與分享,購物車按鈕的整體高度與寬度*/
+				width:100%;
+				height:30%;
+			
+}
+
+.buy-instantly{
+						/*一鍵購買的樣式調整*/
+						text-align:center;
+						height:15%;/*高度佔15% 另外15%給shopping-cart div*/
+						width:100%;
+
+						border:solid 1px #EEE;
+						border-radius:3px;
+
+						font-size:12pt;
+						color:#595959;
+						letter-spacing:2px;
+
+						width:80px;
+						padding:5px;
+						margin:0 auto;
+						margin-top:20px;
+						margin-bottom:20px;
+
+}
+
+.buy-instantly:hover{
+	border-color:#BD9F87;
+	transition:0.5s;
+}
+				
+				
+
+.shopping-cart{
+						
+						width:100%;
+						height:15%;/*與上方一鍵購買區塊各佔15% 總共等於nav show div的30%*/
+						color:#8c8c8c;
+						font-size:14pt;/*調整按鈕大小*/
+						margin-top:10px;
+						border-top:solid 1px;
+						border-color: white;						
+}
+
+
+
+
+.shopping-cart-button1{
+								/*向左漂浮*/
+								float:left;
+                                width:49%;/*寬度與右邊button一樣都為49% 留點空間給border*/
+								text-align:center;
+								display:inline-block;
+								/*設置右方border*/
+								border-right:solid;
+								border-width:1px;
+								border-color: white;
+								color:#8c8c8c;
+								/*調整整體文字距離*/
+								padding-top:5px;
+								padding-bottom:5px;			
+}
+
+.shopping-cart-button2{
+									width:49%;/*寬度與左邊button一樣都為49% 留點空間給border*/
+									text-align:center;
+									display:inline-block;
+									
+									/*調整整體文字距離*/
+									padding-top:5px;
+									padding-bottom:5px;								
+}
+
+
+.shopping-cart-button1:hover{
+							color:black;
+							transition:0.5s;
+							cursor:pointer;
+}
+
+.shopping-cart-button2:hover{
+							color:black;
+							transition:0.5s;
+							cursor:pointer;
+}
+
+
+
+
+
+.merchandise-title{
+							/*調整h1樣式/調整masonry商品文案標題*/
+							font-size:12pt;
+							text-align:center;
+							font-weight:normal;
+							
+}
+.merchandise-content{
+								/*調整h1樣式/調整masonry商品文案內容*/
+								font-size:10pt;
+								text-align:center;
+								font-weight:normal;
+}
+
+.merchandise-price{
+							font-size:10pt;
+							text-align:center;
+}
+
+
+#masonry a:link{text-decoration: none;
+				color:#595959;}
+
+#masonry a:visited{color:#595959;}
+
+
+
+
